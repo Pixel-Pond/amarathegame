@@ -236,7 +236,7 @@ function Index() {
       {/* USPs section removed */}
 
       {/* CORE LOOP */}
-      <section style={{ backgroundColor: "var(--amara-cream)" }}>
+      <section style={{ backgroundColor: "var(--amara-pink-light)" }}>
         <div className="max-w-4xl mx-auto px-6 py-16">
           <SectionHeader
             label="Core loop"
