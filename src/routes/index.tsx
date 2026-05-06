@@ -6,9 +6,6 @@ import {
   BookOpen,
   Moon,
   GitBranch,
-  Instagram,
-  MessageCircle,
-  Music2,
   Youtube,
   Link as LinkIcon,
   Sun,
@@ -19,6 +16,15 @@ import amaraCat from "@/assets/amara-cat.png";
 import amaraCafe from "@/assets/amara-cafe.png";
 import amaraEquipment from "@/assets/amara-equipment.png";
 import amaraRooms from "@/assets/amara-rooms.png";
+import iconInstagram from "@/assets/icon-instagram.png";
+import iconDiscord from "@/assets/icon-discord.png";
+import iconTiktok from "@/assets/icon-tiktok.png";
+import laptop from "@/assets/laptop.png";
+import coffeeBean from "@/assets/coffee-bean.png";
+import sparkle from "@/assets/sparkle.png";
+import surprise from "@/assets/surprise.png";
+import question from "@/assets/question.png";
+import pixelPondLogo from "@/assets/pixel-pond-logo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -28,12 +34,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Amara is a cozy narrative café management game by Pixel Pond. Brew drinks, serve talking cats, and uncover a deeper story. Coming Q1 2027 on PC.",
+          "Amara is a cozy narrative-driven management game by Pixel Pond. Craft drinks, serve talking cats, and uncover a deeper story. Coming Q2 2027 on PC.",
       },
       { property: "og:title", content: "Amara — A cozy café game with a twist" },
       {
         property: "og:description",
-        content: "An indie narrative management game by Pixel Pond. Coming Q1 2027 on PC.",
+        content: "An indie narrative-driven management game by Pixel Pond. Coming Q2 2027 on PC.",
       },
     ],
   }),
@@ -77,23 +83,27 @@ const menu = [
 
 const specs = [
   { label: "Studio", value: "Pixel Pond" },
-  { label: "Genre", value: "Narrative management" },
+  { label: "Genre", value: "Narrative-Driven Management" },
   { label: "Platform", value: "PC · Unity 6.3" },
   { label: "Dev stage", value: "Alpha" },
-  { label: "Release", value: "Q1 2027" },
-  { label: "Length", value: "5–9 hours" },
+  { label: "Release", value: "Q2 2027" },
+  { label: "Mode", value: "Singleplayer" },
 ];
 
-const socials = [
-  { Icon: Instagram, label: "Instagram", href: "https://www.instagram.com/amarathegamebr" },
-  { Icon: MessageCircle, label: "Discord", href: "https://discord.com/invite/xzgxcSYAMp" },
-  { Icon: Music2, label: "TikTok", href: "https://www.tiktok.com/@amarathegamebr" },
-  { Icon: Youtube, label: "YouTube (BR)", href: "https://www.youtube.com/@amarathegamebr" },
-  { Icon: Youtube, label: "YouTube (EN)", href: "https://www.youtube.com/@amarathegame" },
-  { Icon: LinkIcon, label: "Linktree", href: "https://linktr.ee/amarathegamebr" },
+type SocialItem =
+  | { type: "img"; src: string; label: string; href: string }
+  | { type: "icon"; Icon: typeof Youtube; label: string; href: string };
+
+const socials: SocialItem[] = [
+  { type: "img", src: iconInstagram, label: "Instagram", href: "https://www.instagram.com/amarathegamebr" },
+  { type: "img", src: iconDiscord, label: "Discord", href: "https://discord.com/invite/xzgxcSYAMp" },
+  { type: "img", src: iconTiktok, label: "TikTok", href: "https://www.tiktok.com/@amarathegamebr" },
+  { type: "icon", Icon: Youtube, label: "YouTube (BR)", href: "https://www.youtube.com/@amarathegamebr" },
+  { type: "icon", Icon: Youtube, label: "YouTube (EN)", href: "https://www.youtube.com/@amarathegame" },
+  { type: "icon", Icon: LinkIcon, label: "Linktree", href: "https://linktr.ee/amarathegamebr" },
 ];
 
-const tags = ["Narrative management", "Singleplayer", "5–9 hours", "EN & PT"];
+const tags = ["Narrative-Driven Management", "Singleplayer", "EN & PT"];
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
