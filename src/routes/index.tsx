@@ -268,7 +268,7 @@ function Index() {
       <PixelBand />
 
       {/* FEATURES */}
-      <section style={{ backgroundColor: "var(--amara-pink-light)" }}>
+      <section style={{ backgroundColor: "var(--amara-cream)" }}>
         <div className="max-w-4xl mx-auto px-6 py-16">
           <SectionHeader
             label="Features"
