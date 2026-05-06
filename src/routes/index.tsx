@@ -6,9 +6,6 @@ import {
   BookOpen,
   Moon,
   GitBranch,
-  Instagram,
-  MessageCircle,
-  Music2,
   Youtube,
   Link as LinkIcon,
   Sun,
@@ -19,6 +16,15 @@ import amaraCat from "@/assets/amara-cat.png";
 import amaraCafe from "@/assets/amara-cafe.png";
 import amaraEquipment from "@/assets/amara-equipment.png";
 import amaraRooms from "@/assets/amara-rooms.png";
+import iconInstagram from "@/assets/icon-instagram.png";
+import iconDiscord from "@/assets/icon-discord.png";
+import iconTiktok from "@/assets/icon-tiktok.png";
+import laptop from "@/assets/laptop.png";
+import coffeeBean from "@/assets/coffee-bean.png";
+import sparkle from "@/assets/sparkle.png";
+import surprise from "@/assets/surprise.png";
+import question from "@/assets/question.png";
+import pixelPondLogo from "@/assets/pixel-pond-logo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -28,12 +34,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Amara is a cozy narrative café management game by Pixel Pond. Brew drinks, serve talking cats, and uncover a deeper story. Coming Q1 2027 on PC.",
+          "Amara is a cozy narrative-driven management game by Pixel Pond. Craft drinks, serve talking cats, and uncover a deeper story. Coming Q2 2027 on PC.",
       },
       { property: "og:title", content: "Amara — A cozy café game with a twist" },
       {
         property: "og:description",
-        content: "An indie narrative management game by Pixel Pond. Coming Q1 2027 on PC.",
+        content: "An indie narrative-driven management game by Pixel Pond. Coming Q2 2027 on PC.",
       },
     ],
   }),
@@ -77,23 +83,27 @@ const menu = [
 
 const specs = [
   { label: "Studio", value: "Pixel Pond" },
-  { label: "Genre", value: "Narrative management" },
+  { label: "Genre", value: "Narrative-Driven Management" },
   { label: "Platform", value: "PC · Unity 6.3" },
   { label: "Dev stage", value: "Alpha" },
-  { label: "Release", value: "Q1 2027" },
-  { label: "Length", value: "5–9 hours" },
+  { label: "Release", value: "Q2 2027" },
+  { label: "Mode", value: "Singleplayer" },
 ];
 
-const socials = [
-  { Icon: Instagram, label: "Instagram", href: "https://www.instagram.com/amarathegamebr" },
-  { Icon: MessageCircle, label: "Discord", href: "https://discord.com/invite/xzgxcSYAMp" },
-  { Icon: Music2, label: "TikTok", href: "https://www.tiktok.com/@amarathegamebr" },
-  { Icon: Youtube, label: "YouTube (BR)", href: "https://www.youtube.com/@amarathegamebr" },
-  { Icon: Youtube, label: "YouTube (EN)", href: "https://www.youtube.com/@amarathegame" },
-  { Icon: LinkIcon, label: "Linktree", href: "https://linktr.ee/amarathegamebr" },
+type SocialItem =
+  | { type: "img"; src: string; label: string; href: string }
+  | { type: "icon"; Icon: typeof Youtube; label: string; href: string };
+
+const socials: SocialItem[] = [
+  { type: "img", src: iconInstagram, label: "Instagram", href: "https://www.instagram.com/amarathegamebr" },
+  { type: "img", src: iconDiscord, label: "Discord", href: "https://discord.com/invite/xzgxcSYAMp" },
+  { type: "img", src: iconTiktok, label: "TikTok", href: "https://www.tiktok.com/@amarathegamebr" },
+  { type: "icon", Icon: Youtube, label: "YouTube (BR)", href: "https://www.youtube.com/@amarathegamebr" },
+  { type: "icon", Icon: Youtube, label: "YouTube (EN)", href: "https://www.youtube.com/@amarathegame" },
+  { type: "icon", Icon: LinkIcon, label: "Linktree", href: "https://linktr.ee/amarathegamebr" },
 ];
 
-const tags = ["Narrative management", "Singleplayer", "5–9 hours", "EN & PT"];
+const tags = ["Narrative-Driven Management", "Singleplayer", "EN & PT"];
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
@@ -139,9 +149,15 @@ function Index() {
         className="relative overflow-hidden"
         style={{ backgroundColor: "var(--amara-dark)" }}
       >
-        <div className="max-w-4xl mx-auto px-6 pt-16 pb-20 text-center">
+        {/* Decorative sparkles */}
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-10 left-8 w-12 opacity-90 pointer-events-none" />
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-24 right-16 w-8 opacity-70 pointer-events-none rotate-12" />
+        <img src={surprise} alt="" aria-hidden className="hidden md:block absolute bottom-16 left-10 w-20 opacity-90 pointer-events-none" />
+        <img src={coffeeBean} alt="" aria-hidden className="hidden md:block absolute top-32 left-20 w-10 opacity-80 pointer-events-none -rotate-12" />
+
+        <div className="relative max-w-4xl mx-auto px-6 pt-16 pb-20 text-center">
           <span className="inline-block bg-[var(--amara-cream)] text-[var(--amara-dark)] rounded-full text-xs font-extrabold uppercase tracking-widest px-3 py-1.5">
-            Coming Q1 2027 · PC
+            Coming Q2 2027 · PC
           </span>
           <img
             src={amaraTitle}
@@ -155,7 +171,7 @@ function Index() {
             An indie game by Pixel Pond
           </p>
           <p className="mt-5 max-w-lg mx-auto text-sm text-[var(--amara-cream)] opacity-90 leading-relaxed">
-            Brew beautiful drinks, serve talking cats, and manage your little café — while a deeper, darker story slowly unfolds around you.
+            Craft beautiful drinks, serve talking cats, and manage your little café — while a deeper, darker story slowly unfolds around you.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-2">
             {tags.map((t) => (
@@ -193,10 +209,17 @@ function Index() {
             <div className="bg-white border-2 border-[var(--amara-pink-border)] rounded-2xl p-6">
               <h3 className="text-lg font-extrabold text-[var(--amara-dark)]">What you'll do</h3>
               <ul className="mt-3 space-y-2 text-sm text-[var(--amara-dark)]">
-                <li className="flex gap-2"><span>☕</span><span>Make pretty, coffee-culture-inspired drinks.</span></li>
-                <li className="flex gap-2"><span>🐱</span><span>Serve peculiar customers who happen to be talking cats.</span></li>
-                <li className="flex gap-2"><span>📈</span><span>Manage café resources to rise in popularity.</span></li>
-                <li className="flex gap-2"><span>📓</span><span>Write in your diary each night to unlock the story.</span></li>
+                {[
+                  "Make pretty, coffee-culture-inspired drinks.",
+                  "Serve peculiar customers who happen to be talking cats.",
+                  "Manage café resources to rise in popularity.",
+                  "Write in your diary each night to unlock the story.",
+                ].map((line) => (
+                  <li key={line} className="flex gap-2 items-start">
+                    <img src={coffeeBean} alt="" aria-hidden className="w-4 h-4 mt-0.5 shrink-0" />
+                    <span>{line}</span>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="bg-white border-2 border-[var(--amara-pink-border)] rounded-2xl p-6">
@@ -217,8 +240,10 @@ function Index() {
       <PixelBand />
 
       {/* USPs — three big illustrated cards */}
-      <section style={{ backgroundColor: "var(--amara-pink-light)" }}>
-        <div className="max-w-5xl mx-auto px-6 py-16">
+      <section className="relative overflow-hidden" style={{ backgroundColor: "var(--amara-pink-light)" }}>
+        <img src={question} alt="" aria-hidden className="hidden md:block absolute top-12 right-8 w-16 opacity-80 pointer-events-none" />
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute bottom-10 left-6 w-10 opacity-70 pointer-events-none" />
+        <div className="max-w-5xl mx-auto px-6 py-16 relative">
           <SectionHeader
             label="Unique selling points"
             heading="Why Amara stands out"
@@ -334,24 +359,31 @@ function Index() {
       <PixelBand />
 
       {/* FOLLOW — dark band */}
-      <section style={{ backgroundColor: "var(--amara-dark)" }}>
-        <div className="max-w-3xl mx-auto px-6 py-14 text-center">
+      <section className="relative overflow-hidden" style={{ backgroundColor: "var(--amara-dark)" }}>
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-6 left-12 w-10 opacity-80 pointer-events-none" />
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute bottom-8 right-16 w-8 opacity-70 pointer-events-none rotate-45" />
+        <div className="relative max-w-3xl mx-auto px-6 py-14 text-center">
+          <img src={laptop} alt="" aria-hidden className="mx-auto w-28 mb-2 pointer-events-none" />
           <p className="text-xs font-bold uppercase tracking-widest text-[var(--amara-hot)]">Stay in the loop</p>
           <h2 className="mt-2 text-3xl font-extrabold text-[var(--amara-cream)]">Follow along</h2>
           <p className="mt-2 text-sm text-[var(--amara-pink-border)]">
             We're a small team of friends — your support means the world to us.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-2">
-            {socials.map(({ Icon, label, href }) => (
+            {socials.map((s) => (
               <a
-                key={label}
-                href={href}
+                key={s.label}
+                href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[var(--amara-cream)] hover:bg-[var(--amara-peach)] transition-colors rounded-full px-4 py-2 text-sm font-extrabold text-[var(--amara-dark)]"
               >
-                <Icon className="w-4 h-4" />
-                {label}
+                {s.type === "img" ? (
+                  <img src={s.src} alt="" className="w-5 h-5 object-contain" />
+                ) : (
+                  <s.Icon className="w-4 h-4" />
+                )}
+                {s.label}
               </a>
             ))}
           </div>
@@ -360,9 +392,10 @@ function Index() {
 
       {/* FOOTER */}
       <footer
-        className="text-center py-8 px-6"
+        className="text-center py-10 px-6"
         style={{ backgroundColor: "var(--amara-cream)" }}
       >
+        <img src={pixelPondLogo} alt="Pixel Pond" className="mx-auto w-20 mb-3" />
         <p className="text-sm font-extrabold text-[var(--amara-hot)] tracking-wide">Pixel Pond</p>
         <p className="text-xs text-[var(--amara-rose)] mt-1 max-w-md mx-auto">
           A multidisciplinary indie team of friends making meaningful games together.
