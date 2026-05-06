@@ -85,11 +85,12 @@ const specs = [
 ];
 
 const socials = [
-  { Icon: Instagram, label: "Instagram", href: "https://instagram.com/amarathegame" },
-  { Icon: MessageCircle, label: "Discord", href: "#" },
-  { Icon: Music2, label: "TikTok", href: "#" },
-  { Icon: Youtube, label: "YouTube", href: "https://youtube.com/@amarathegameen" },
-  { Icon: LinkIcon, label: "Linktree", href: "#" },
+  { Icon: Instagram, label: "Instagram", href: "https://www.instagram.com/amarathegamebr" },
+  { Icon: MessageCircle, label: "Discord", href: "https://discord.com/invite/xzgxcSYAMp" },
+  { Icon: Music2, label: "TikTok", href: "https://www.tiktok.com/@amarathegamebr" },
+  { Icon: Youtube, label: "YouTube (BR)", href: "https://www.youtube.com/@amarathegamebr" },
+  { Icon: Youtube, label: "YouTube (EN)", href: "https://www.youtube.com/@amarathegame" },
+  { Icon: LinkIcon, label: "Linktree", href: "https://linktr.ee/amarathegamebr" },
 ];
 
 const tags = ["Narrative management", "Singleplayer", "5–9 hours", "EN & PT"];
