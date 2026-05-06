@@ -209,10 +209,17 @@ function Index() {
             <div className="bg-white border-2 border-[var(--amara-pink-border)] rounded-2xl p-6">
               <h3 className="text-lg font-extrabold text-[var(--amara-dark)]">What you'll do</h3>
               <ul className="mt-3 space-y-2 text-sm text-[var(--amara-dark)]">
-                <li className="flex gap-2"><span>☕</span><span>Make pretty, coffee-culture-inspired drinks.</span></li>
-                <li className="flex gap-2"><span>🐱</span><span>Serve peculiar customers who happen to be talking cats.</span></li>
-                <li className="flex gap-2"><span>📈</span><span>Manage café resources to rise in popularity.</span></li>
-                <li className="flex gap-2"><span>📓</span><span>Write in your diary each night to unlock the story.</span></li>
+                {[
+                  "Make pretty, coffee-culture-inspired drinks.",
+                  "Serve peculiar customers who happen to be talking cats.",
+                  "Manage café resources to rise in popularity.",
+                  "Write in your diary each night to unlock the story.",
+                ].map((line) => (
+                  <li key={line} className="flex gap-2 items-start">
+                    <img src={coffeeBean} alt="" aria-hidden className="w-4 h-4 mt-0.5 shrink-0" />
+                    <span>{line}</span>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="bg-white border-2 border-[var(--amara-pink-border)] rounded-2xl p-6">
