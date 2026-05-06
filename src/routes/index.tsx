@@ -144,10 +144,10 @@ function PixelBand() {
 function Index() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: "var(--amara-pink-light)" }}>
-      {/* HERO — dark rose with cream pixel accents */}
+      {/* HERO — light peach so the dark logo pops */}
       <section
         className="relative overflow-hidden"
-        style={{ backgroundColor: "var(--amara-dark)" }}
+        style={{ backgroundColor: "var(--amara-peach)" }}
       >
         {/* Decorative sparkles */}
         <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-10 left-8 w-12 opacity-90 pointer-events-none" />
@@ -156,7 +156,7 @@ function Index() {
         <img src={coffeeBean} alt="" aria-hidden className="hidden md:block absolute top-32 left-20 w-10 opacity-80 pointer-events-none -rotate-12" />
 
         <div className="relative max-w-4xl mx-auto px-6 pt-16 pb-20 text-center">
-          <span className="inline-block bg-[var(--amara-cream)] text-[var(--amara-dark)] rounded-full text-xs font-extrabold uppercase tracking-widest px-3 py-1.5">
+          <span className="inline-block bg-[var(--amara-dark)] text-[var(--amara-cream)] rounded-full text-xs font-extrabold uppercase tracking-widest px-3 py-1.5">
             Coming Q2 2027 · PC
           </span>
           <img
@@ -164,13 +164,13 @@ function Index() {
             alt="Amara"
             className="mt-8 mx-auto w-full max-w-xl h-auto amara-pixel"
           />
-          <p className="mt-4 text-xl font-bold text-[var(--amara-peach)]">
+          <p className="mt-4 text-xl font-bold text-[var(--amara-dark)]">
             A cozy café game… with a twist.
           </p>
-          <p className="mt-1 text-sm text-[var(--amara-pink-border)] opacity-90">
+          <p className="mt-1 text-sm text-[var(--amara-rose)] opacity-90">
             An indie game by Pixel Pond
           </p>
-          <p className="mt-5 max-w-lg mx-auto text-sm text-[var(--amara-cream)] opacity-90 leading-relaxed">
+          <p className="mt-5 max-w-lg mx-auto text-sm text-[var(--amara-dark)] opacity-90 leading-relaxed">
             Craft beautiful drinks, serve talking cats, and manage your little café — while a deeper, darker story slowly unfolds around you.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-2">
@@ -183,7 +183,7 @@ function Index() {
               </span>
             ))}
           </div>
-          <p className="mt-10 opacity-50 text-2xl tracking-widest text-[var(--amara-peach)]">
+          <p className="mt-10 opacity-50 text-2xl tracking-widest text-[var(--amara-dark)]">
             ᓚᘏᗢ&nbsp;&nbsp;&nbsp;ᓚᘏᗢ&nbsp;&nbsp;&nbsp;ᓚᘏᗢ
           </p>
         </div>
@@ -236,7 +236,7 @@ function Index() {
       {/* USPs section removed */}
 
       {/* CORE LOOP */}
-      <section style={{ backgroundColor: "var(--amara-cream)" }}>
+      <section style={{ backgroundColor: "var(--amara-pink-light)" }}>
         <div className="max-w-4xl mx-auto px-6 py-16">
           <SectionHeader
             label="Core loop"
@@ -268,7 +268,7 @@ function Index() {
       <PixelBand />
 
       {/* FEATURES */}
-      <section style={{ backgroundColor: "var(--amara-pink-light)" }}>
+      <section style={{ backgroundColor: "var(--amara-cream)" }}>
         <div className="max-w-4xl mx-auto px-6 py-16">
           <SectionHeader
             label="Features"
@@ -295,7 +295,7 @@ function Index() {
       <PixelBand />
 
       {/* MENU */}
-      <section style={{ backgroundColor: "var(--amara-cream)" }}>
+      <section style={{ backgroundColor: "var(--amara-pink-light)" }}>
         <div className="max-w-4xl mx-auto px-6 py-16">
           <SectionHeader
             label="On the menu"
