@@ -94,13 +94,15 @@ type SocialItem =
   | { type: "img"; src: string; label: string; href: string }
   | { type: "icon"; Icon: typeof Youtube; label: string; href: string };
 
-const socials: SocialItem[] = [
+const socialsEN: SocialItem[] = [
+  { type: "icon", Icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@amarathegame" },
+];
+
+const socialsPT: SocialItem[] = [
   { type: "img", src: iconInstagram, label: "Instagram", href: "https://www.instagram.com/amarathegamebr" },
   { type: "img", src: iconDiscord, label: "Discord", href: "https://discord.com/invite/xzgxcSYAMp" },
   { type: "img", src: iconTiktok, label: "TikTok", href: "https://www.tiktok.com/@amarathegamebr" },
-  { type: "icon", Icon: Youtube, label: "YouTube (BR)", href: "https://www.youtube.com/@amarathegamebr" },
-  { type: "icon", Icon: Youtube, label: "YouTube (EN)", href: "https://www.youtube.com/@amarathegame" },
-  { type: "icon", Icon: LinkIcon, label: "Linktree", href: "https://linktr.ee/amarathegamebr" },
+  { type: "icon", Icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@amarathegamebr" },
 ];
 
 const tags = ["Narrative-Driven Management", "Singleplayer", "EN & PT"];
