@@ -75,13 +75,14 @@ const usps = [
   },
 ];
 
-const menu = [
-  { emoji: "☕", name: "Espresso", type: "Hot drink" },
-  { emoji: "🧋", name: "Latte", type: "Hot drink" },
-  { emoji: "🍫", name: "Chocolate mocha", type: "Specialty" },
-  { emoji: "🍮", name: "Caramel mocha", type: "Specialty" },
-  { emoji: "🥐", name: "Pastries", type: "Food" },
-  { emoji: "🍰", name: "Café sweets", type: "Food" },
+type MenuItem = { img: string; name: string; type: string; mystery?: boolean };
+const menu: MenuItem[] = [
+  { img: drinkChocolateMocha, name: "Chocolate Mocha", type: "Specialty" },
+  { img: drinkStrawberryFrap, name: "Strawberry Frappuccino", type: "Cold drink" },
+  { img: drinkCookiesCream, name: "Cookies 'n Cream", type: "Frappuccino" },
+  { img: question, name: "???", type: "Coming soon", mystery: true },
+  { img: question, name: "???", type: "Coming soon", mystery: true },
+  { img: question, name: "???", type: "Coming soon", mystery: true },
 ];
 
 const specs = [
