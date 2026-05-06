@@ -359,8 +359,11 @@ function Index() {
       <PixelBand />
 
       {/* FOLLOW — dark band */}
-      <section style={{ backgroundColor: "var(--amara-dark)" }}>
-        <div className="max-w-3xl mx-auto px-6 py-14 text-center">
+      <section className="relative overflow-hidden" style={{ backgroundColor: "var(--amara-dark)" }}>
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-6 left-12 w-10 opacity-80 pointer-events-none" />
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute bottom-8 right-16 w-8 opacity-70 pointer-events-none rotate-45" />
+        <div className="relative max-w-3xl mx-auto px-6 py-14 text-center">
+          <img src={laptop} alt="" aria-hidden className="mx-auto w-28 mb-2 pointer-events-none" />
           <p className="text-xs font-bold uppercase tracking-widest text-[var(--amara-hot)]">Stay in the loop</p>
           <h2 className="mt-2 text-3xl font-extrabold text-[var(--amara-cream)]">Follow along</h2>
           <p className="mt-2 text-sm text-[var(--amara-pink-border)]">
@@ -389,9 +392,10 @@ function Index() {
 
       {/* FOOTER */}
       <footer
-        className="text-center py-8 px-6"
+        className="text-center py-10 px-6"
         style={{ backgroundColor: "var(--amara-cream)" }}
       >
+        <img src={pixelPondLogo} alt="Pixel Pond" className="mx-auto w-20 mb-3" />
         <p className="text-sm font-extrabold text-[var(--amara-hot)] tracking-wide">Pixel Pond</p>
         <p className="text-xs text-[var(--amara-rose)] mt-1 max-w-md mx-auto">
           A multidisciplinary indie team of friends making meaningful games together.
