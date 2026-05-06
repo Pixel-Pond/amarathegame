@@ -15,6 +15,8 @@ import amaraTitle from "@/assets/amara-title.png";
 import drinkChocolateMocha from "@/assets/drink-chocolate-mocha.png";
 import drinkStrawberryFrap from "@/assets/drink-strawberry-frappuccino.png";
 import drinkCookiesCream from "@/assets/drink-cookies-cream.png";
+import drinkEspresso from "@/assets/drink-espresso.png";
+import drinkCappuccino from "@/assets/drink-cappuccino.png";
 import amaraCat from "@/assets/amara-cat.png";
 import amaraCafe from "@/assets/amara-cafe.png";
 import amaraEquipment from "@/assets/amara-equipment.png";
