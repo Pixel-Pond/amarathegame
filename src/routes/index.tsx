@@ -240,8 +240,10 @@ function Index() {
       <PixelBand />
 
       {/* USPs — three big illustrated cards */}
-      <section style={{ backgroundColor: "var(--amara-pink-light)" }}>
-        <div className="max-w-5xl mx-auto px-6 py-16">
+      <section className="relative overflow-hidden" style={{ backgroundColor: "var(--amara-pink-light)" }}>
+        <img src={question} alt="" aria-hidden className="hidden md:block absolute top-12 right-8 w-16 opacity-80 pointer-events-none" />
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute bottom-10 left-6 w-10 opacity-70 pointer-events-none" />
+        <div className="max-w-5xl mx-auto px-6 py-16 relative">
           <SectionHeader
             label="Unique selling points"
             heading="Why Amara stands out"
