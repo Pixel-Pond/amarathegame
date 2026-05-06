@@ -12,6 +12,7 @@ import {
   Youtube,
   Link as LinkIcon,
 } from "lucide-react";
+import amaraTitle from "@/assets/amara-title.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -92,12 +93,13 @@ function Index() {
           <span className="inline-block bg-[#72243E] text-[#F4C0D1] rounded-full text-xs font-bold uppercase tracking-widest px-3 py-1">
             Coming Q1 2027 · PC
           </span>
-          <h1
-            className="mt-6 font-black text-[#72243E] leading-none font-handwriting"
-            style={{ fontSize: "96px" }}
-          >
-            Amara<span className="text-[#D4537E]">.</span>
-          </h1>
+          <img
+            src={amaraTitle}
+            alt="Amara"
+            className="mt-6 mx-auto w-full max-w-md h-auto"
+            style={{ imageRendering: "pixelated" }}
+          />
+          
           <p className="mt-4 text-lg font-semibold text-[#993556]">
             A cozy café game... with a twist.
           </p>
