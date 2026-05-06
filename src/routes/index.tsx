@@ -12,6 +12,9 @@ import {
   Bed,
 } from "lucide-react";
 import amaraTitle from "@/assets/amara-title.png";
+import drinkChocolateMocha from "@/assets/drink-chocolate-mocha.png";
+import drinkStrawberryFrap from "@/assets/drink-strawberry-frappuccino.png";
+import drinkCookiesCream from "@/assets/drink-cookies-cream.png";
 import amaraCat from "@/assets/amara-cat.png";
 import amaraCafe from "@/assets/amara-cafe.png";
 import amaraEquipment from "@/assets/amara-equipment.png";
@@ -72,13 +75,14 @@ const usps = [
   },
 ];
 
-const menu = [
-  { emoji: "☕", name: "Espresso", type: "Hot drink" },
-  { emoji: "🧋", name: "Latte", type: "Hot drink" },
-  { emoji: "🍫", name: "Chocolate mocha", type: "Specialty" },
-  { emoji: "🍮", name: "Caramel mocha", type: "Specialty" },
-  { emoji: "🥐", name: "Pastries", type: "Food" },
-  { emoji: "🍰", name: "Café sweets", type: "Food" },
+type MenuItem = { img: string; name: string; type: string; mystery?: boolean };
+const menu: MenuItem[] = [
+  { img: drinkChocolateMocha, name: "Chocolate Mocha", type: "Specialty" },
+  { img: drinkStrawberryFrap, name: "Strawberry Frappuccino", type: "Cold drink" },
+  { img: drinkCookiesCream, name: "Cookies 'n Cream", type: "Frappuccino" },
+  { img: question, name: "???", type: "Coming soon", mystery: true },
+  { img: question, name: "???", type: "Coming soon", mystery: true },
+  { img: question, name: "???", type: "Coming soon", mystery: true },
 ];
 
 const specs = [
@@ -308,12 +312,16 @@ function Index() {
             className="grid gap-3 mt-8"
             style={{ gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))" }}
           >
-            {menu.map((m) => (
+            {menu.map((m, i) => (
               <div
-                key={m.name}
-                className="bg-white rounded-2xl p-4 text-center border-2 border-[var(--amara-pink-border)]"
+                key={m.name + i}
+                className="bg-white rounded-2xl p-4 text-center border-2 border-[var(--amara-pink-border)] flex flex-col items-center"
               >
-                <span className="text-3xl block mb-1">{m.emoji}</span>
+                <img
+                  src={m.img}
+                  alt={m.mystery ? "Mystery drink" : m.name}
+                  className={`w-20 h-20 object-contain mb-2 ${m.mystery ? "opacity-70" : ""}`}
+                />
                 <p className="text-sm font-extrabold text-[var(--amara-dark)]">{m.name}</p>
                 <p className="text-xs text-[var(--amara-rose)]">{m.type}</p>
               </div>
