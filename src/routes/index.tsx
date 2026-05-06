@@ -326,8 +326,8 @@ function Index() {
 
       {/* FOLLOW — dark band */}
       <section className="relative overflow-hidden" style={{ backgroundColor: "var(--amara-dark)" }}>
-        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-6 left-12 w-10 opacity-80 pointer-events-none" />
-        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute bottom-8 right-16 w-8 opacity-70 pointer-events-none rotate-45" />
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-6 left-12 w-10 pointer-events-none" />
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute bottom-6 right-12 w-10 pointer-events-none" />
         <div className="relative max-w-3xl mx-auto px-6 py-14 text-center">
           <img src={laptop} alt="" aria-hidden className="mx-auto w-28 mb-2 pointer-events-none" />
           <p className="text-xs font-bold uppercase tracking-widest text-[var(--amara-hot)]">Stay in the loop</p>
