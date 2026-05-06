@@ -149,9 +149,15 @@ function Index() {
         className="relative overflow-hidden"
         style={{ backgroundColor: "var(--amara-dark)" }}
       >
-        <div className="max-w-4xl mx-auto px-6 pt-16 pb-20 text-center">
+        {/* Decorative sparkles */}
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-10 left-8 w-12 opacity-90 pointer-events-none" />
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-24 right-16 w-8 opacity-70 pointer-events-none rotate-12" />
+        <img src={surprise} alt="" aria-hidden className="hidden md:block absolute bottom-16 left-10 w-20 opacity-90 pointer-events-none" />
+        <img src={coffeeBean} alt="" aria-hidden className="hidden md:block absolute top-32 left-20 w-10 opacity-80 pointer-events-none -rotate-12" />
+
+        <div className="relative max-w-4xl mx-auto px-6 pt-16 pb-20 text-center">
           <span className="inline-block bg-[var(--amara-cream)] text-[var(--amara-dark)] rounded-full text-xs font-extrabold uppercase tracking-widest px-3 py-1.5">
-            Coming Q1 2027 · PC
+            Coming Q2 2027 · PC
           </span>
           <img
             src={amaraTitle}
@@ -165,7 +171,7 @@ function Index() {
             An indie game by Pixel Pond
           </p>
           <p className="mt-5 max-w-lg mx-auto text-sm text-[var(--amara-cream)] opacity-90 leading-relaxed">
-            Brew beautiful drinks, serve talking cats, and manage your little café — while a deeper, darker story slowly unfolds around you.
+            Craft beautiful drinks, serve talking cats, and manage your little café — while a deeper, darker story slowly unfolds around you.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-2">
             {tags.map((t) => (
