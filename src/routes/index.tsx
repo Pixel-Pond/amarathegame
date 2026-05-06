@@ -155,7 +155,7 @@ function Index() {
       {/* HERO — light peach so the dark logo pops */}
       <section
         className="relative overflow-hidden"
-        style={{ backgroundColor: "var(--amara-pink-light)" }}
+        style={{ backgroundColor: "var(--amara-dark)" }}
       >
         <div className="relative max-w-4xl mx-auto px-6 pt-16 pb-20 text-center">
           <span className="inline-block bg-[var(--amara-dark)] text-[var(--amara-cream)] rounded-full text-xs font-extrabold uppercase tracking-widest px-3 py-1.5">
