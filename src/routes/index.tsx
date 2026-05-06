@@ -155,14 +155,8 @@ function Index() {
       {/* HERO — light peach so the dark logo pops */}
       <section
         className="relative overflow-hidden"
-        style={{ backgroundColor: "var(--amara-peach)" }}
+        style={{ backgroundColor: "var(--amara-pink-light)" }}
       >
-        {/* Decorative sparkles */}
-        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-10 left-8 w-12 opacity-90 pointer-events-none" />
-        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-24 right-16 w-8 opacity-70 pointer-events-none rotate-12" />
-        <img src={surprise} alt="" aria-hidden className="hidden md:block absolute bottom-16 left-10 w-20 opacity-90 pointer-events-none" />
-        <img src={coffeeBean} alt="" aria-hidden className="hidden md:block absolute top-32 left-20 w-10 opacity-80 pointer-events-none -rotate-12" />
-
         <div className="relative max-w-4xl mx-auto px-6 pt-16 pb-20 text-center">
           <span className="inline-block bg-[var(--amara-dark)] text-[var(--amara-cream)] rounded-full text-xs font-extrabold uppercase tracking-widest px-3 py-1.5">
             Coming Q2 2027 · PC
