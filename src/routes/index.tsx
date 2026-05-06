@@ -335,24 +335,34 @@ function Index() {
           <p className="mt-2 text-sm text-[var(--amara-pink-border)]">
             We're a small team of friends — your support means the world to us.
           </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-2">
-            {socials.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[var(--amara-cream)] hover:bg-[var(--amara-peach)] transition-colors rounded-full px-4 py-2 text-sm font-extrabold text-[var(--amara-dark)]"
-              >
-                {s.type === "img" ? (
-                  <img src={s.src} alt="" className="w-5 h-5 object-contain" />
-                ) : (
-                  <s.Icon className="w-4 h-4" />
-                )}
-                {s.label}
-              </a>
-            ))}
-          </div>
+          {([
+            { title: "Português", items: socialsPT },
+            { title: "English", items: socialsEN },
+          ]).map((group) => (
+            <div key={group.title} className="mt-6">
+              <p className="text-xs font-extrabold uppercase tracking-widest text-[var(--amara-peach)] mb-2">
+                {group.title}
+              </p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {group.items.map((s) => (
+                  <a
+                    key={s.label + group.title}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[var(--amara-cream)] hover:bg-[var(--amara-peach)] transition-colors rounded-full px-4 py-2 text-sm font-extrabold text-[var(--amara-dark)]"
+                  >
+                    {s.type === "img" ? (
+                      <img src={s.src} alt="" className="w-5 h-5 object-contain" />
+                    ) : (
+                      <s.Icon className="w-4 h-4" />
+                    )}
+                    {s.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
