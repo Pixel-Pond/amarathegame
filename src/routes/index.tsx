@@ -233,37 +233,7 @@ function Index() {
 
       <PixelBand />
 
-      {/* USPs — three big illustrated cards */}
-      <section className="relative overflow-hidden" style={{ backgroundColor: "var(--amara-pink-light)" }}>
-        <img src={question} alt="" aria-hidden className="hidden md:block absolute top-12 right-8 w-16 opacity-80 pointer-events-none" />
-        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute bottom-10 left-6 w-10 opacity-70 pointer-events-none" />
-        <div className="max-w-5xl mx-auto px-6 py-16 relative">
-          <SectionHeader
-            label="Unique selling points"
-            heading="Why Amara stands out"
-          />
-          <div className="grid md:grid-cols-3 gap-5 mt-8">
-            {usps.map((u) => (
-              <div
-                key={u.title}
-                className="bg-[var(--amara-cream)] border-2 border-[var(--amara-dark)] rounded-2xl overflow-hidden"
-              >
-                <div className="aspect-square bg-[var(--amara-pink-surface)] flex items-center justify-center p-4">
-                  <img src={u.img} alt={u.title} className="amara-pixel w-full h-full object-contain" />
-                </div>
-                <div className="bg-[var(--amara-dark)] text-center py-2">
-                  <h3 className="text-sm font-extrabold text-[var(--amara-cream)]">{u.title}</h3>
-                </div>
-                <p className="text-xs text-[var(--amara-dark)] text-center px-4 py-3 leading-relaxed font-semibold">
-                  {u.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <PixelBand />
+      {/* USPs section removed */}
 
       {/* CORE LOOP */}
       <section style={{ backgroundColor: "var(--amara-cream)" }}>
