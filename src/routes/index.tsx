@@ -99,7 +99,7 @@ function Index() {
             className="mt-6 mx-auto w-full max-w-md h-auto"
             style={{ imageRendering: "pixelated" }}
           />
-          </h1>
+          
           <p className="mt-4 text-lg font-semibold text-[#993556]">
             A cozy café game... with a twist.
           </p>
