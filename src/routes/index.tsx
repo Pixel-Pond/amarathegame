@@ -73,7 +73,7 @@ function SectionHeader({ label, heading, subtext }: { label: string; heading: st
   return (
     <div className="mb-6">
       <p className="text-xs font-bold uppercase tracking-widest text-[#D4537E]">{label}</p>
-      <h2 className="mt-2 text-2xl font-bold text-[#72243E]">{heading}</h2>
+      <h2 className="mt-2 text-4xl font-bold text-[#72243E] font-handwriting">{heading}</h2>
       {subtext && <p className="mt-2 text-sm text-[#993556]">{subtext}</p>}
     </div>
   );
@@ -93,8 +93,8 @@ function Index() {
             Coming Q1 2027 · PC
           </span>
           <h1
-            className="mt-6 font-black text-[#72243E] leading-none"
-            style={{ fontSize: "56px" }}
+            className="mt-6 font-black text-[#72243E] leading-none font-handwriting"
+            style={{ fontSize: "96px" }}
           >
             Amara<span className="text-[#D4537E]">.</span>
           </h1>
@@ -195,7 +195,7 @@ function Index() {
 
         {/* FOLLOW */}
         <section className="bg-[#F9EEF0] rounded-2xl py-8 px-6 text-center">
-          <h2 className="text-xl font-bold text-[#72243E]">Follow along</h2>
+          <h2 className="text-3xl font-bold text-[#72243E] font-handwriting">Follow along</h2>
           <p className="mt-2 text-sm text-[#993556]">
             We're a small team of friends — your support means the world to us.
           </p>
