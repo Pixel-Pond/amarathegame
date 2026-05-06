@@ -79,12 +79,12 @@ const usps = [
 
 type MenuItem = { img: string; name: string; type: string; mystery?: boolean };
 const menu: MenuItem[] = [
+  { img: drinkEspresso, name: "Espresso", type: "Classic" },
+  { img: drinkCappuccino, name: "Cappuccino", type: "Classic" },
   { img: drinkChocolateMocha, name: "Chocolate Mocha", type: "Specialty" },
   { img: drinkStrawberryFrap, name: "Strawberry Frappuccino", type: "Cold drink" },
   { img: drinkCookiesCream, name: "Cookies 'n Cream", type: "Frappuccino" },
-  { img: question, name: "???", type: "Coming soon", mystery: true },
-  { img: question, name: "???", type: "Coming soon", mystery: true },
-  { img: question, name: "???", type: "Coming soon", mystery: true },
+  { img: question, name: "???", type: "And many more...", mystery: true },
 ];
 
 const specs = [
