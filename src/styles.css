@@ -142,7 +142,19 @@
     color: var(--color-foreground);
     font-family: "Nunito", ui-sans-serif, system-ui, sans-serif;
   }
-  .font-handwriting {
-    font-family: "Caveat", "Nunito", cursive;
-  }
 }
+
+/* Amara palette */
+:root {
+  --amara-dark: #5E2230;
+  --amara-rose: #993556;
+  --amara-pink: #C97388;
+  --amara-peach: #FBC0B5;
+  --amara-pink-light: #F9EEF0;
+  --amara-pink-surface: #FBEAF0;
+  --amara-pink-border: #F4C0D1;
+  --amara-hot: #D4537E;
+  --amara-cream: #FEF6D8;
+}
+
+.amara-pixel { image-rendering: pixelated; }
