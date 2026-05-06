@@ -187,12 +187,6 @@ function Index() {
             ᓚᘏᗢ&nbsp;&nbsp;&nbsp;ᓚᘏᗢ&nbsp;&nbsp;&nbsp;ᓚᘏᗢ
           </p>
         </div>
-        <img
-          src={amaraCat}
-          alt=""
-          aria-hidden
-          className="amara-pixel hidden md:block absolute right-4 bottom-2 w-32 opacity-90 pointer-events-none"
-        />
       </section>
 
       <PixelBand />
