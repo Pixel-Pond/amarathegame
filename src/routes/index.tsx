@@ -12,6 +12,9 @@ import {
   Bed,
 } from "lucide-react";
 import amaraTitle from "@/assets/amara-title.png";
+import drinkChocolateMocha from "@/assets/drink-chocolate-mocha.png";
+import drinkStrawberryFrap from "@/assets/drink-strawberry-frappuccino.png";
+import drinkCookiesCream from "@/assets/drink-cookies-cream.png";
 import amaraCat from "@/assets/amara-cat.png";
 import amaraCafe from "@/assets/amara-cafe.png";
 import amaraEquipment from "@/assets/amara-equipment.png";
