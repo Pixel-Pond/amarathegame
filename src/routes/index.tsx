@@ -312,12 +312,16 @@ function Index() {
             className="grid gap-3 mt-8"
             style={{ gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))" }}
           >
-            {menu.map((m) => (
+            {menu.map((m, i) => (
               <div
-                key={m.name}
-                className="bg-white rounded-2xl p-4 text-center border-2 border-[var(--amara-pink-border)]"
+                key={m.name + i}
+                className="bg-white rounded-2xl p-4 text-center border-2 border-[var(--amara-pink-border)] flex flex-col items-center"
               >
-                <span className="text-3xl block mb-1">{m.emoji}</span>
+                <img
+                  src={m.img}
+                  alt={m.mystery ? "Mystery drink" : m.name}
+                  className={`w-20 h-20 object-contain mb-2 ${m.mystery ? "opacity-70" : ""}`}
+                />
                 <p className="text-sm font-extrabold text-[var(--amara-dark)]">{m.name}</p>
                 <p className="text-xs text-[var(--amara-rose)]">{m.type}</p>
               </div>
