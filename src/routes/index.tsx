@@ -1,5 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Coffee, Cat, TrendingUp, BookOpen, ShoppingBag, GitBranch, Youtube, Sun, Bed } from "lucide-react";
+import {
+  Coffee,
+  Cat,
+  TrendingUp,
+  BookOpen,
+  ShoppingBag,
+  GitBranch,
+  Youtube,
+  Sun,
+  Bed,
+} from "lucide-react";
 import amaraTitle from "@/assets/amara-title.png";
 import drinkChocolateMocha from "@/assets/drink-chocolate-mocha.png";
 import drinkStrawberryFrap from "@/assets/drink-strawberry-frappuccino.png";
@@ -43,36 +53,12 @@ export const Route = createFileRoute("/")({
 });
 
 const features = [
-  {
-    Icon: Coffee,
-    title: "Craft authentic drinks",
-    desc: "Research-driven recipes inspired by real barista culture. Follow the employee manual to perfect every layer.",
-  },
-  {
-    Icon: Cat,
-    title: "Serve peculiar guests",
-    desc: "Your customers are talking cats with personalities, orders, and patience meters.",
-  },
-  {
-    Icon: TrendingUp,
-    title: "Grow your reputation",
-    desc: "Earn reputation, level up, and expand your space to create a café loved by all.",
-  },
-  {
-    Icon: ShoppingBag,
-    title: "Make purchases",
-    desc: "Use your tablet to make online purchases for ingredients, equipment, expansions and decorations.",
-  },
-  {
-    Icon: BookOpen,
-    title: "Write in your diary",
-    desc: "Each night, Rebeca writes. Unlock story elements and reveal what lies beneath the surface.",
-  },
-  {
-    Icon: GitBranch,
-    title: "Multiple endings",
-    desc: "30 in-game days. Your choices shape the outcome — some routes lead somewhere unexpected.",
-  },
+  { Icon: Coffee, title: "Craft authentic drinks", desc: "Research-driven recipes inspired by real barista culture. Follow the employee manual to perfect every layer." },
+  { Icon: Cat, title: "Serve peculiar guests", desc: "Your customers are talking cats with personalities, orders, and patience meters." },
+  { Icon: TrendingUp, title: "Grow your reputation", desc: "Earn reputation, level up, and expand your space to create a café loved by all." },
+  { Icon: ShoppingBag, title: "Make purchases", desc: "Use your tablet to make online purchases for ingredients, equipment, expansions and decorations." },
+  { Icon: BookOpen, title: "Write in your diary", desc: "Each night, Rebeca writes. Unlock story elements and reveal what lies beneath the surface." },
+  { Icon: GitBranch, title: "Multiple endings", desc: "30 in-game days. Your choices shape the outcome — some routes lead somewhere unexpected." },
 ];
 
 type MenuItem = { img: string; name: string; temp: "hot" | "cold" };
@@ -106,7 +92,9 @@ function SectionHeader({ heading, subtext }: { heading: string; subtext?: string
   return (
     <div className="mb-6 text-center">
       <h2 className="text-3xl font-extrabold text-[var(--amara-dark)]">{heading}</h2>
-      {subtext && <p className="mt-2 text-sm text-[var(--amara-rose)] max-w-xl mx-auto">{subtext}</p>}
+      {subtext && (
+        <p className="mt-2 text-sm text-[var(--amara-rose)] max-w-xl mx-auto">{subtext}</p>
+      )}
     </div>
   );
 }
@@ -135,12 +123,19 @@ function Index() {
           <span className="inline-block bg-[var(--amara-cream)] text-[var(--amara-dark)] rounded-full text-xs font-extrabold uppercase tracking-widest px-4 py-1.5">
             Coming Q2 2027 · PC
           </span>
-          <img src={amaraTitle} alt="Amara" className="mt-8 mx-auto w-full max-w-xl h-auto amara-pixel" />
-          <p className="mt-4 text-xl font-bold text-[var(--amara-peach)]">A cozy café game… with a twist.</p>
-          <p className="mt-1 text-sm text-[var(--amara-pink-border)]">An indie game by Pixel Pond</p>
+          <img
+            src={amaraTitle}
+            alt="Amara"
+            className="mt-8 mx-auto w-full max-w-xl h-auto amara-pixel"
+          />
+          <p className="mt-4 text-xl font-bold text-[var(--amara-peach)]">
+            A cozy café game… with a twist.
+          </p>
+          <p className="mt-1 text-sm text-[var(--amara-pink-border)]">
+            An indie game by Pixel Pond
+          </p>
           <p className="mt-5 max-w-lg mx-auto text-sm text-[var(--amara-cream)] leading-relaxed">
-            Craft beautiful drinks, serve talking cats, and manage your little café — while a deeper, darker story
-            slowly unfolds around you.
+            Craft beautiful drinks, serve talking cats, and manage your little café — while a deeper, darker story slowly unfolds around you.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-2">
             {tags.map((t) => (
@@ -189,26 +184,14 @@ function Index() {
             />
             <div className="grid md:grid-cols-3 gap-4 flex-1">
               {[
-                {
-                  Icon: Sun,
-                  time: "8 a.m.",
-                  title: "Open the café",
-                  desc: "Rebeca starts her shift. Serve cats before their patience runs out.",
-                },
-                {
-                  Icon: Coffee,
-                  time: "5 p.m.",
-                  title: "Daily report",
-                  desc: "Shift ends. Review your performance, earnings, and reputation.",
-                },
-                {
-                  Icon: Bed,
-                  time: "7 p.m.",
-                  title: "Bedroom activities",
-                  desc: "Return to bedroom on the café's second floor. Make online purchases and write in your diary.",
-                },
+                { Icon: Sun, time: "8 a.m.", title: "Open the café", desc: "Rebeca starts her shift. Serve cats before their patience runs out." },
+                { Icon: Coffee, time: "5 p.m.", title: "Daily report", desc: "Shift ends. Review your performance, earnings, and reputation." },
+                { Icon: Bed, time: "7 p.m.", title: "Bedroom activities", desc: "Return to bedroom on the café's second floor. Make online purchases and write in your diary." },
               ].map((b) => (
-                <div key={b.time} className="bg-white rounded-2xl border-2 border-[var(--amara-pink-border)] p-5">
+                <div
+                  key={b.time}
+                  className="bg-white rounded-2xl border-2 border-[var(--amara-pink-border)] p-5"
+                >
                   <div className="w-10 h-10 rounded-full bg-[var(--amara-dark)] flex items-center justify-center">
                     <b.Icon className="w-5 h-5 text-[var(--amara-cream)]" />
                   </div>
@@ -218,7 +201,12 @@ function Index() {
                 </div>
               ))}
             </div>
-            <img src={rebeca} alt="" aria-hidden className="hidden md:block w-16 lg:w-20 h-auto amara-pixel shrink-0" />
+            <img
+              src={rebeca}
+              alt=""
+              aria-hidden
+              className="hidden md:block w-16 lg:w-20 h-auto amara-pixel shrink-0"
+            />
           </div>
         </div>
       </section>
@@ -229,54 +217,21 @@ function Index() {
       <section style={{ backgroundColor: "var(--amara-cream)" }}>
         <div className="relative max-w-6xl mx-auto px-6 py-16">
           {/* Side decorations */}
-          <img
-            src={iconMeowreo}
-            alt=""
-            aria-hidden
-            className="hidden lg:block absolute left-2 top-8 w-20 pointer-events-none"
-            style={{ transform: "rotate(-8deg)" }}
-          />
-          <img
-            src={iconMilk}
-            alt=""
-            aria-hidden
-            className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 w-16 pointer-events-none"
-            style={{ transform: "rotate(8deg)" }}
-          />
-          <img
-            src={iconCafe}
-            alt=""
-            aria-hidden
-            className="hidden lg:block absolute left-2 bottom-8 w-20 pointer-events-none"
-            style={{ transform: "rotate(-8deg)" }}
-          />
-          <img
-            src={iconHot}
-            alt=""
-            aria-hidden
-            className="hidden lg:block absolute right-4 top-8 w-16 pointer-events-none"
-            style={{ transform: "rotate(8deg)" }}
-          />
-          <img
-            src={iconCold}
-            alt=""
-            aria-hidden
-            className="hidden lg:block absolute right-2 top-1/2 -translate-y-1/2 w-20 pointer-events-none"
-            style={{ transform: "rotate(-8deg)" }}
-          />
-          <img
-            src={iconSprinkles}
-            alt=""
-            aria-hidden
-            className="hidden lg:block absolute right-4 bottom-8 w-20 pointer-events-none"
-            style={{ transform: "rotate(8deg)" }}
-          />
+          <img src={iconMeowreo} alt="" aria-hidden className="hidden lg:block absolute left-2 top-8 w-20 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
+          <img src={iconMilk} alt="" aria-hidden className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 w-16 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
+          <img src={iconCafe} alt="" aria-hidden className="hidden lg:block absolute left-2 bottom-8 w-20 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
+          <img src={iconHot} alt="" aria-hidden className="hidden lg:block absolute right-4 top-8 w-16 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
+          <img src={iconCold} alt="" aria-hidden className="hidden lg:block absolute right-2 top-1/2 -translate-y-1/2 w-20 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
+          <img src={iconSprinkles} alt="" aria-hidden className="hidden lg:block absolute right-4 bottom-8 w-20 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
 
           <div className="max-w-4xl mx-auto">
             <SectionHeader heading="What you'll do in Amara" />
             <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8">
               {features.map(({ Icon, title, desc }) => (
-                <div key={title} className="bg-white border-2 border-[var(--amara-pink-border)] rounded-2xl p-4">
+                <div
+                  key={title}
+                  className="bg-white border-2 border-[var(--amara-pink-border)] rounded-2xl p-4"
+                >
                   <div className="w-10 h-10 rounded-lg bg-[var(--amara-pink-surface)] flex items-center justify-center">
                     <Icon className="w-5 h-5 text-[var(--amara-rose)]" />
                   </div>
@@ -291,11 +246,40 @@ function Index() {
 
       <PixelBand />
 
+      {/* FEATURES */}
+      <section style={{ backgroundColor: "var(--amara-cream)" }}>
+        <div className="max-w-4xl mx-auto px-6 py-16">
+          <SectionHeader heading="What you'll do in Amara" />
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8">
+            {features.map(({ Icon, title, desc }) => (
+              <div
+                key={title}
+                className="bg-white border-2 border-[var(--amara-pink-border)] rounded-2xl p-4"
+              >
+                <div className="w-10 h-10 rounded-lg bg-[var(--amara-pink-surface)] flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-[var(--amara-rose)]" />
+                </div>
+                <h3 className="mt-3 text-sm font-extrabold text-[var(--amara-dark)]">{title}</h3>
+                <p className="mt-1 text-xs text-[var(--amara-rose)] leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <PixelBand />
+
       {/* MENU */}
       <section style={{ backgroundColor: "#FDD9DA" }}>
         <div className="max-w-4xl mx-auto px-6 py-16">
-          <SectionHeader heading="On the menu" subtext="Prepare adorable drinks and pastries with care." />
-          <div className="grid gap-3 mt-8" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))" }}>
+          <SectionHeader
+            heading="On the menu"
+            subtext="Prepare adorable drinks and pastries with care."
+          />
+          <div
+            className="grid gap-3 mt-8"
+            style={{ gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))" }}
+          >
             {menu.map((m, i) => (
               <div
                 key={m.name + i}
@@ -306,7 +290,11 @@ function Index() {
                   alt={m.temp === "hot" ? "Hot drink" : "Cold drink"}
                   className="absolute top-2 right-2 w-7 h-7 object-contain"
                 />
-                <img src={m.img} alt={m.name} className="w-20 h-20 object-contain mb-2" />
+                <img
+                  src={m.img}
+                  alt={m.name}
+                  className="w-20 h-20 object-contain mb-2"
+                />
                 <p className="text-sm font-extrabold text-[var(--amara-dark)]">{m.name}</p>
               </div>
             ))}
@@ -322,18 +310,8 @@ function Index() {
 
       {/* FOLLOW */}
       <section className="relative overflow-hidden" style={{ backgroundColor: "var(--amara-dark)" }}>
-        <img
-          src={sparkle}
-          alt=""
-          aria-hidden
-          className="hidden md:block absolute top-6 left-12 w-10 pointer-events-none"
-        />
-        <img
-          src={sparkle}
-          alt=""
-          aria-hidden
-          className="hidden md:block absolute top-6 right-12 w-10 pointer-events-none"
-        />
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-6 left-12 w-10 pointer-events-none" />
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-6 right-12 w-10 pointer-events-none" />
         <div className="relative max-w-3xl mx-auto px-6 py-14 text-center">
           <img src={amaraCupLogo} alt="" aria-hidden className="mx-auto w-28 mb-2 pointer-events-none" />
           <p className="text-xs font-bold uppercase tracking-widest text-[var(--amara-hot)]">Stay in the loop</p>
@@ -341,10 +319,10 @@ function Index() {
           <p className="mt-2 text-sm text-[var(--amara-pink-border)]">
             We're a small game studio of friends — your support means the world to us.
           </p>
-          {[
+          {([
             { title: "English", items: socialsEN },
             { title: "Português", items: socialsPT },
-          ].map((group) => (
+          ]).map((group) => (
             <div key={group.title} className="mt-6">
               <p className="text-xs font-extrabold uppercase tracking-widest text-[var(--amara-peach)] mb-2">
                 {group.title}
@@ -375,7 +353,10 @@ function Index() {
       <PixelBand />
 
       {/* FOOTER */}
-      <footer className="text-center py-10 px-6" style={{ backgroundColor: "var(--amara-cream)" }}>
+      <footer
+        className="text-center py-10 px-6"
+        style={{ backgroundColor: "var(--amara-cream)" }}
+      >
         <img src={pixelPondLogo} alt="Pixel Pond" className="mx-auto w-20 mb-3" />
         <p className="text-sm font-extrabold text-[var(--amara-hot)] tracking-wide">Pixel Pond</p>
         <p className="text-xs text-[var(--amara-rose)] mt-1 max-w-md mx-auto">
