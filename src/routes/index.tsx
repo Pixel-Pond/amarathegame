@@ -20,7 +20,7 @@ import iconInstagram from "@/assets/icon-instagram.png";
 import iconDiscord from "@/assets/icon-discord.png";
 import iconTiktok from "@/assets/icon-tiktok.png";
 import sparkle from "@/assets/sparkle.png";
-import question from "@/assets/question.png";
+
 import pixelPondLogo from "@/assets/pixel-pond-logo.png";
 import gameplayGif from "@/assets/gameplay.gif";
 import catAlufo from "@/assets/cat-alufo.gif";
