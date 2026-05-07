@@ -56,19 +56,18 @@ const features = [
   { Icon: Coffee, title: "Craft authentic drinks", desc: "Research-driven recipes inspired by real barista culture. Follow the employee manual to perfect every layer." },
   { Icon: Cat, title: "Serve peculiar guests", desc: "Your customers are talking cats with personalities, orders, and patience meters." },
   { Icon: TrendingUp, title: "Grow your reputation", desc: "Earn reputation, level up, and expand your space to create a café loved by all." },
-  { Icon: BookOpen, title: "Write in your diary", desc: "Each night, Rebeca writes. Unlock story elements and reveal what lies beneath the surface." },
   { Icon: ShoppingBag, title: "Make purchases", desc: "Use your tablet to make online purchases for ingredients, equipment, expansions and decorations." },
+  { Icon: BookOpen, title: "Write in your diary", desc: "Each night, Rebeca writes. Unlock story elements and reveal what lies beneath the surface." },
   { Icon: GitBranch, title: "Multiple endings", desc: "30 in-game days. Your choices shape the outcome — some routes lead somewhere unexpected." },
 ];
 
-type MenuItem = { img: string; name: string; type: string; mystery?: boolean };
+type MenuItem = { img: string; name: string; temp: "hot" | "cold" };
 const menu: MenuItem[] = [
-  { img: drinkEspresso, name: "Espresso", type: "Classic" },
-  { img: drinkCappuccino, name: "Cappuccino", type: "Classic" },
-  { img: drinkChocolateMocha, name: "Chocolate Mocha", type: "Specialty" },
-  { img: drinkStrawberryFrap, name: "Strawberry Frappuccino", type: "Cold drink" },
-  { img: drinkCookiesCream, name: "Cookies 'n Cream", type: "Frappuccino" },
-  { img: question, name: "???", type: "And many more...", mystery: true },
+  { img: drinkEspresso, name: "Espresso", temp: "hot" },
+  { img: drinkCappuccino, name: "Cappuccino", temp: "hot" },
+  { img: drinkChocolateMocha, name: "Chocolate Mocha", temp: "hot" },
+  { img: drinkStrawberryFrap, name: "Strawberry Frappuccino", temp: "cold" },
+  { img: drinkCookiesCream, name: "Cookies 'n Cream Frappuccino", temp: "cold" },
 ];
 
 type SocialItem =
