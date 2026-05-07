@@ -283,17 +283,25 @@ function Index() {
             {menu.map((m, i) => (
               <div
                 key={m.name + i}
-                className="bg-white rounded-2xl p-4 text-center border-2 border-[var(--amara-pink-border)] flex flex-col items-center"
+                className="relative bg-white rounded-2xl p-4 text-center border-2 border-[var(--amara-pink-border)] flex flex-col items-center"
               >
                 <img
+                  src={m.temp === "hot" ? iconHot : iconCold}
+                  alt={m.temp === "hot" ? "Hot drink" : "Cold drink"}
+                  className="absolute top-2 right-2 w-7 h-7 object-contain"
+                />
+                <img
                   src={m.img}
-                  alt={m.mystery ? "Mystery drink" : m.name}
-                  className={`w-20 h-20 object-contain mb-2 ${m.mystery ? "opacity-70" : ""}`}
+                  alt={m.name}
+                  className="w-20 h-20 object-contain mb-2"
                 />
                 <p className="text-sm font-extrabold text-[var(--amara-dark)]">{m.name}</p>
-                <p className="text-xs text-[var(--amara-rose)]">{m.type}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <img src={iconCafe} alt="" aria-hidden className="w-10 h-10 object-contain" />
+            <p className="text-sm font-extrabold text-[var(--amara-dark)]">And many more to unlock...</p>
           </div>
         </div>
       </section>
