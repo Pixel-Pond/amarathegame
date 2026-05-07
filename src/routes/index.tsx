@@ -4,10 +4,9 @@ import {
   Cat,
   TrendingUp,
   BookOpen,
-  Moon,
+  ShoppingBag,
   GitBranch,
   Youtube,
-  Link as LinkIcon,
   Sun,
   Bed,
 } from "lucide-react";
@@ -17,19 +16,16 @@ import drinkStrawberryFrap from "@/assets/drink-strawberry-frappuccino.png";
 import drinkCookiesCream from "@/assets/drink-cookies-cream.png";
 import drinkEspresso from "@/assets/drink-espresso.png";
 import drinkCappuccino from "@/assets/drink-cappuccino.png";
-import amaraCat from "@/assets/amara-cat.png";
-import amaraCafe from "@/assets/amara-cafe.png";
-import amaraEquipment from "@/assets/amara-equipment.png";
-import amaraRooms from "@/assets/amara-rooms.png";
 import iconInstagram from "@/assets/icon-instagram.png";
 import iconDiscord from "@/assets/icon-discord.png";
 import iconTiktok from "@/assets/icon-tiktok.png";
-import laptop from "@/assets/laptop.png";
-import coffeeBean from "@/assets/coffee-bean.png";
 import sparkle from "@/assets/sparkle.png";
-import surprise from "@/assets/surprise.png";
 import question from "@/assets/question.png";
 import pixelPondLogo from "@/assets/pixel-pond-logo.png";
+import gameplayGif from "@/assets/gameplay.gif";
+import catAlufo from "@/assets/cat-alufo.gif";
+import rebeca from "@/assets/rebeca.png";
+import amaraCupLogo from "@/assets/amara-cup-logo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -53,28 +49,10 @@ export const Route = createFileRoute("/")({
 const features = [
   { Icon: Coffee, title: "Craft authentic drinks", desc: "Research-driven recipes inspired by real barista culture. Follow the employee manual to perfect every layer." },
   { Icon: Cat, title: "Serve peculiar guests", desc: "Your customers are talking cats with personalities, orders, and patience meters." },
-  { Icon: TrendingUp, title: "Grow your reputation", desc: "Earn REP, level up, and expand your space. Restock via in-game tablet." },
+  { Icon: TrendingUp, title: "Grow your reputation", desc: "Earn reputation, level up, and expand your space to create a café loved by all." },
   { Icon: BookOpen, title: "Write in your diary", desc: "Each night, Rebeca writes. Unlock story elements and reveal what lies beneath the surface." },
-  { Icon: Moon, title: "Dual gameplay loop", desc: "Café management by day. Narrative-driven personal moments by night." },
+  { Icon: ShoppingBag, title: "Make purchases", desc: "Use your tablet to make online purchases for ingredients, equipment, expansions and decorations." },
   { Icon: GitBranch, title: "Multiple endings", desc: "30 in-game days. Your choices shape the outcome — some routes lead somewhere unexpected." },
-];
-
-const usps = [
-  {
-    img: amaraEquipment,
-    title: "Authentic coffee crafting",
-    desc: "Research-driven systems inspired by real barista culture.",
-  },
-  {
-    img: amaraCafe,
-    title: "Cozy… with a twist",
-    desc: "A comforting experience that gradually reveals a deeper, darker narrative.",
-  },
-  {
-    img: amaraRooms,
-    title: "Dual gameplay",
-    desc: "Café management by day, personal story-driven moments by night.",
-  },
 ];
 
 type MenuItem = { img: string; name: string; type: string; mystery?: boolean };
@@ -87,20 +65,12 @@ const menu: MenuItem[] = [
   { img: question, name: "???", type: "And many more...", mystery: true },
 ];
 
-const specs = [
-  { label: "Studio", value: "Pixel Pond" },
-  { label: "Genre", value: "Narrative-Driven Management" },
-  { label: "Platform", value: "PC · Unity 6.3" },
-  { label: "Dev stage", value: "Alpha" },
-  { label: "Release", value: "Q2 2027" },
-  { label: "Mode", value: "Singleplayer" },
-];
-
 type SocialItem =
   | { type: "img"; src: string; label: string; href: string }
   | { type: "icon"; Icon: typeof Youtube; label: string; href: string };
 
 const socialsEN: SocialItem[] = [
+  { type: "img", src: iconDiscord, label: "Discord", href: "https://discord.com/invite/xzgxcSYAMp" },
   { type: "icon", Icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@amarathegame" },
 ];
 
@@ -111,21 +81,12 @@ const socialsPT: SocialItem[] = [
   { type: "icon", Icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@amarathegamebr" },
 ];
 
-const tags = ["Narrative-Driven Management", "Singleplayer", "EN & PT"];
+const tags = ["Narrative", "Management", "Pixel Art", "Singleplayer", "EN & PT"];
 
-function Pill({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="inline-block bg-[var(--amara-pink-surface)] border border-[var(--amara-pink-border)] text-[var(--amara-dark)] text-xs font-semibold rounded-full px-3 py-1">
-      {children}
-    </span>
-  );
-}
-
-function SectionHeader({ label, heading, subtext }: { label: string; heading: string; subtext?: string }) {
+function SectionHeader({ heading, subtext }: { heading: string; subtext?: string }) {
   return (
     <div className="mb-6 text-center">
-      <p className="text-xs font-bold uppercase tracking-widest text-[var(--amara-hot)]">{label}</p>
-      <h2 className="mt-2 text-3xl font-extrabold text-[var(--amara-dark)]">{heading}</h2>
+      <h2 className="text-3xl font-extrabold text-[var(--amara-dark)]">{heading}</h2>
       {subtext && (
         <p className="mt-2 text-sm text-[var(--amara-rose)] max-w-xl mx-auto">{subtext}</p>
       )}
@@ -133,7 +94,6 @@ function SectionHeader({ label, heading, subtext }: { label: string; heading: st
   );
 }
 
-/* Decorative repeating pixel-block pattern (cream squares on dark) */
 function PixelBand() {
   return (
     <div
@@ -152,13 +112,10 @@ function PixelBand() {
 function Index() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: "var(--amara-pink-light)" }}>
-      {/* HERO — light peach so the dark logo pops */}
-      <section
-        className="relative overflow-hidden"
-        style={{ backgroundColor: "var(--amara-dark)" }}
-      >
+      {/* HERO */}
+      <section className="relative overflow-hidden" style={{ backgroundColor: "var(--amara-dark)" }}>
         <div className="relative max-w-4xl mx-auto px-6 pt-16 pb-20 text-center">
-          <span className="inline-block bg-[var(--amara-dark)] text-[var(--amara-cream)] rounded-full text-xs font-extrabold uppercase tracking-widest px-3 py-1.5">
+          <span className="inline-block bg-[var(--amara-cream)] text-[var(--amara-dark)] rounded-full text-xs font-extrabold uppercase tracking-widest px-4 py-1.5">
             Coming Q2 2027 · PC
           </span>
           <img
@@ -166,13 +123,13 @@ function Index() {
             alt="Amara"
             className="mt-8 mx-auto w-full max-w-xl h-auto amara-pixel"
           />
-          <p className="mt-4 text-xl font-bold text-[var(--amara-dark)]">
+          <p className="mt-4 text-xl font-bold text-[var(--amara-peach)]">
             A cozy café game… with a twist.
           </p>
-          <p className="mt-1 text-sm text-[var(--amara-rose)] opacity-90">
+          <p className="mt-1 text-sm text-[var(--amara-pink-border)]">
             An indie game by Pixel Pond
           </p>
-          <p className="mt-5 max-w-lg mx-auto text-sm text-[var(--amara-dark)] opacity-90 leading-relaxed">
+          <p className="mt-5 max-w-lg mx-auto text-sm text-[var(--amara-cream)] leading-relaxed">
             Craft beautiful drinks, serve talking cats, and manage your little café — while a deeper, darker story slowly unfolds around you.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-2">
@@ -185,84 +142,69 @@ function Index() {
               </span>
             ))}
           </div>
-          <p className="mt-10 opacity-50 text-2xl tracking-widest text-[var(--amara-dark)]">
-            ᓚᘏᗢ&nbsp;&nbsp;&nbsp;ᓚᘏᗢ&nbsp;&nbsp;&nbsp;ᓚᘏᗢ
+        </div>
+      </section>
+
+      <PixelBand />
+
+      {/* MEET AMARA */}
+      <section style={{ backgroundColor: "var(--amara-cream)" }}>
+        <div className="max-w-4xl mx-auto px-6 py-16">
+          <SectionHeader heading="Meet Amara" />
+          <div className="mt-6 flex justify-center">
+            <img
+              src={gameplayGif}
+              alt="Amara gameplay"
+              className="w-full max-w-2xl h-auto rounded-2xl border-4 border-[var(--amara-rose)] shadow-lg amara-pixel"
+            />
+          </div>
+          <p className="mt-6 text-center text-base font-bold text-[var(--amara-dark)]">
+            A cozy management game where Rebeca runs a café for talking cats!
           </p>
         </div>
       </section>
 
       <PixelBand />
 
-      {/* OVERVIEW — notebook card on cream */}
-      <section style={{ backgroundColor: "var(--amara-cream)" }}>
-        <div className="max-w-4xl mx-auto px-6 py-16">
-          <SectionHeader
-            label="Overview"
-            heading="Meet Amara"
-            subtext="A cozy management game where Rebeca runs a café for talking cats — and slowly uncovers a story that's anything but ordinary."
-          />
-          <div className="grid md:grid-cols-2 gap-6 mt-8">
-            <div className="bg-white border-2 border-[var(--amara-pink-border)] rounded-2xl p-6">
-              <h3 className="text-lg font-extrabold text-[var(--amara-dark)]">What you'll do</h3>
-              <ul className="mt-3 space-y-2 text-sm text-[var(--amara-dark)]">
-                {[
-                  "Make pretty, coffee-culture-inspired drinks.",
-                  "Serve peculiar customers who happen to be talking cats.",
-                  "Manage café resources to rise in popularity.",
-                  "Write in your diary each night to unlock the story.",
-                ].map((line) => (
-                  <li key={line} className="flex gap-2 items-start">
-                    <img src={coffeeBean} alt="" aria-hidden className="w-4 h-4 mt-0.5 shrink-0" />
-                    <span>{line}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-white border-2 border-[var(--amara-pink-border)] rounded-2xl p-6">
-              <h3 className="text-lg font-extrabold text-[var(--amara-dark)]">At a glance</h3>
-              <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-                {specs.map((s) => (
-                  <div key={s.label} className="border-b border-[var(--amara-pink-border)]/60 pb-1">
-                    <dt className="text-[10px] uppercase tracking-wider text-[var(--amara-rose)] font-bold">{s.label}</dt>
-                    <dd className="text-[var(--amara-dark)] font-bold">{s.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <PixelBand />
-
-      {/* USPs section removed */}
-
       {/* CORE LOOP */}
-      <section style={{ backgroundColor: "var(--amara-pink-light)" }}>
-        <div className="max-w-4xl mx-auto px-6 py-16">
+      <section style={{ backgroundColor: "#FDD9DA" }}>
+        <div className="max-w-5xl mx-auto px-6 py-16">
           <SectionHeader
-            label="Core loop"
             heading="A day in Rebeca's life"
             subtext="30 in-game days. Two interwoven loops. Story moments unfold between every shift."
           />
-          <div className="grid md:grid-cols-3 gap-4 mt-8">
-            {[
-              { Icon: Sun, time: "8 a.m.", title: "Open the café", desc: "Rebeca starts her shift. Serve cats before their patience runs out." },
-              { Icon: Coffee, time: "5 p.m.", title: "Daily report", desc: "Shift ends. Review your earnings, REP, and what tomorrow brings." },
-              { Icon: Bed, time: "7 p.m.", title: "Bedroom activities", desc: "Return home, write in your diary, and let the story unfold." },
-            ].map((b) => (
-              <div
-                key={b.time}
-                className="bg-white rounded-2xl border-2 border-[var(--amara-pink-border)] p-5"
-              >
-                <div className="w-10 h-10 rounded-full bg-[var(--amara-dark)] flex items-center justify-center">
-                  <b.Icon className="w-5 h-5 text-[var(--amara-cream)]" />
+          <div className="flex items-end justify-center gap-4 mt-8">
+            <img
+              src={catAlufo}
+              alt=""
+              aria-hidden
+              className="hidden md:block w-24 lg:w-32 h-auto amara-pixel self-end shrink-0"
+            />
+            <div className="grid md:grid-cols-3 gap-4 flex-1">
+              {[
+                { Icon: Sun, time: "8 a.m.", title: "Open the café", desc: "Rebeca starts her shift. Serve cats before their patience runs out." },
+                { Icon: Coffee, time: "5 p.m.", title: "Daily report", desc: "Shift ends. Review your performance, earnings, and reputation." },
+                { Icon: Bed, time: "7 p.m.", title: "Bedroom activities", desc: "Return to bedroom on the café's second floor. Make online purchases and write in your diary." },
+              ].map((b) => (
+                <div
+                  key={b.time}
+                  className="bg-white rounded-2xl border-2 border-[var(--amara-pink-border)] p-5"
+                >
+                  <div className="w-10 h-10 rounded-full bg-[var(--amara-dark)] flex items-center justify-center">
+                    <b.Icon className="w-5 h-5 text-[var(--amara-cream)]" />
+                  </div>
+                  <p className="mt-3 text-xs font-bold uppercase tracking-wider text-[var(--amara-hot)]">{b.time}</p>
+                  <h3 className="text-base font-extrabold text-[var(--amara-dark)]">{b.title}</h3>
+                  <p className="mt-1 text-xs text-[var(--amara-rose)] leading-relaxed">{b.desc}</p>
                 </div>
-                <p className="mt-3 text-xs font-bold uppercase tracking-wider text-[var(--amara-hot)]">{b.time}</p>
-                <h3 className="text-base font-extrabold text-[var(--amara-dark)]">{b.title}</h3>
-                <p className="mt-1 text-xs text-[var(--amara-rose)] leading-relaxed">{b.desc}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+            <img
+              src={rebeca}
+              alt=""
+              aria-hidden
+              className="hidden md:block w-24 lg:w-32 h-auto amara-pixel self-end shrink-0"
+            />
           </div>
         </div>
       </section>
@@ -272,11 +214,7 @@ function Index() {
       {/* FEATURES */}
       <section style={{ backgroundColor: "var(--amara-cream)" }}>
         <div className="max-w-4xl mx-auto px-6 py-16">
-          <SectionHeader
-            label="Features"
-            heading="What you'll do in Amara"
-            subtext="Two interwoven loops — run the café by day, live Rebeca's personal story by night."
-          />
+          <SectionHeader heading="What you'll do in Amara" />
           <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8">
             {features.map(({ Icon, title, desc }) => (
               <div
@@ -297,12 +235,11 @@ function Index() {
       <PixelBand />
 
       {/* MENU */}
-      <section style={{ backgroundColor: "var(--amara-pink-light)" }}>
+      <section style={{ backgroundColor: "#FDD9DA" }}>
         <div className="max-w-4xl mx-auto px-6 py-16">
           <SectionHeader
-            label="On the menu"
-            heading="Drinks & food to serve"
-            subtext="Mix, layer, and pour — every item is a small craft challenge."
+            heading="On the menu"
+            subtext="Prepare adorable drinks and pastries with care."
           />
           <div
             className="grid gap-3 mt-8"
@@ -328,20 +265,20 @@ function Index() {
 
       <PixelBand />
 
-      {/* FOLLOW — dark band */}
+      {/* FOLLOW */}
       <section className="relative overflow-hidden" style={{ backgroundColor: "var(--amara-dark)" }}>
         <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-6 left-12 w-10 pointer-events-none" />
-        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute bottom-6 right-12 w-10 pointer-events-none" />
+        <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-6 right-12 w-10 pointer-events-none" />
         <div className="relative max-w-3xl mx-auto px-6 py-14 text-center">
-          <img src={laptop} alt="" aria-hidden className="mx-auto w-28 mb-2 pointer-events-none" />
+          <img src={amaraCupLogo} alt="" aria-hidden className="mx-auto w-28 mb-2 pointer-events-none" />
           <p className="text-xs font-bold uppercase tracking-widest text-[var(--amara-hot)]">Stay in the loop</p>
           <h2 className="mt-2 text-3xl font-extrabold text-[var(--amara-cream)]">Follow along</h2>
           <p className="mt-2 text-sm text-[var(--amara-pink-border)]">
-            We're a small team of friends — your support means the world to us.
+            We're a small game studio of friends — your support means the world to us.
           </p>
           {([
-            { title: "Português", items: socialsPT },
             { title: "English", items: socialsEN },
+            { title: "Português", items: socialsPT },
           ]).map((group) => (
             <div key={group.title} className="mt-6">
               <p className="text-xs font-extrabold uppercase tracking-widest text-[var(--amara-peach)] mb-2">
@@ -369,6 +306,8 @@ function Index() {
           ))}
         </div>
       </section>
+
+      <PixelBand />
 
       {/* FOOTER */}
       <footer
