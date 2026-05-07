@@ -26,6 +26,12 @@ import gameplayGif from "@/assets/gameplay.gif";
 import catAlufo from "@/assets/cat-alufo.gif";
 import rebeca from "@/assets/rebeca.png";
 import amaraCupLogo from "@/assets/amara-cup-logo.png";
+import iconCold from "@/assets/icon-cold.png";
+import iconHot from "@/assets/icon-hot.png";
+import iconMeowreo from "@/assets/icon-meowreo.png";
+import iconSprinkles from "@/assets/icon-sprinkles.png";
+import iconCafe from "@/assets/icon-cafe.png";
+import iconMilk from "@/assets/icon-milk.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
