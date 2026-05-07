@@ -20,12 +20,18 @@ import iconInstagram from "@/assets/icon-instagram.png";
 import iconDiscord from "@/assets/icon-discord.png";
 import iconTiktok from "@/assets/icon-tiktok.png";
 import sparkle from "@/assets/sparkle.png";
-import question from "@/assets/question.png";
+
 import pixelPondLogo from "@/assets/pixel-pond-logo.png";
 import gameplayGif from "@/assets/gameplay.gif";
 import catAlufo from "@/assets/cat-alufo.gif";
 import rebeca from "@/assets/rebeca.png";
 import amaraCupLogo from "@/assets/amara-cup-logo.png";
+import iconCold from "@/assets/icon-cold.png";
+import iconHot from "@/assets/icon-hot.png";
+import iconMeowreo from "@/assets/icon-meowreo.png";
+import iconSprinkles from "@/assets/icon-sprinkles.png";
+import iconCafe from "@/assets/icon-cafe.png";
+import iconMilk from "@/assets/icon-milk.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -50,19 +56,18 @@ const features = [
   { Icon: Coffee, title: "Craft authentic drinks", desc: "Research-driven recipes inspired by real barista culture. Follow the employee manual to perfect every layer." },
   { Icon: Cat, title: "Serve peculiar guests", desc: "Your customers are talking cats with personalities, orders, and patience meters." },
   { Icon: TrendingUp, title: "Grow your reputation", desc: "Earn reputation, level up, and expand your space to create a café loved by all." },
-  { Icon: BookOpen, title: "Write in your diary", desc: "Each night, Rebeca writes. Unlock story elements and reveal what lies beneath the surface." },
   { Icon: ShoppingBag, title: "Make purchases", desc: "Use your tablet to make online purchases for ingredients, equipment, expansions and decorations." },
+  { Icon: BookOpen, title: "Write in your diary", desc: "Each night, Rebeca writes. Unlock story elements and reveal what lies beneath the surface." },
   { Icon: GitBranch, title: "Multiple endings", desc: "30 in-game days. Your choices shape the outcome — some routes lead somewhere unexpected." },
 ];
 
-type MenuItem = { img: string; name: string; type: string; mystery?: boolean };
+type MenuItem = { img: string; name: string; temp: "hot" | "cold" };
 const menu: MenuItem[] = [
-  { img: drinkEspresso, name: "Espresso", type: "Classic" },
-  { img: drinkCappuccino, name: "Cappuccino", type: "Classic" },
-  { img: drinkChocolateMocha, name: "Chocolate Mocha", type: "Specialty" },
-  { img: drinkStrawberryFrap, name: "Strawberry Frappuccino", type: "Cold drink" },
-  { img: drinkCookiesCream, name: "Cookies 'n Cream", type: "Frappuccino" },
-  { img: question, name: "???", type: "And many more...", mystery: true },
+  { img: drinkEspresso, name: "Espresso", temp: "hot" },
+  { img: drinkCappuccino, name: "Cappuccino", temp: "hot" },
+  { img: drinkChocolateMocha, name: "Chocolate Mocha", temp: "hot" },
+  { img: drinkStrawberryFrap, name: "Strawberry Frappuccino", temp: "cold" },
+  { img: drinkCookiesCream, name: "Cookies 'n Cream Frappuccino", temp: "cold" },
 ];
 
 type SocialItem =
@@ -168,17 +173,14 @@ function Index() {
 
       {/* CORE LOOP */}
       <section style={{ backgroundColor: "#FDD9DA" }}>
-        <div className="max-w-5xl mx-auto px-6 py-16">
-          <SectionHeader
-            heading="A day in Rebeca's life"
-            subtext="30 in-game days. Two interwoven loops. Story moments unfold between every shift."
-          />
-          <div className="flex items-end justify-center gap-4 mt-8">
+        <div className="max-w-5xl mx-auto px-6 py-12">
+          <SectionHeader heading="A day in Rebeca's life" />
+          <div className="flex items-center justify-center gap-8 mt-4">
             <img
               src={catAlufo}
               alt=""
               aria-hidden
-              className="hidden md:block w-24 lg:w-32 h-auto amara-pixel self-end shrink-0"
+              className="hidden md:block w-16 lg:w-20 h-auto amara-pixel shrink-0"
             />
             <div className="grid md:grid-cols-3 gap-4 flex-1">
               {[
@@ -203,8 +205,41 @@ function Index() {
               src={rebeca}
               alt=""
               aria-hidden
-              className="hidden md:block w-24 lg:w-32 h-auto amara-pixel self-end shrink-0"
+              className="hidden md:block w-16 lg:w-20 h-auto amara-pixel shrink-0"
             />
+          </div>
+        </div>
+      </section>
+
+      <PixelBand />
+
+      {/* FEATURES */}
+      <section style={{ backgroundColor: "var(--amara-cream)" }}>
+        <div className="relative max-w-6xl mx-auto px-6 py-16">
+          {/* Side decorations */}
+          <img src={iconMeowreo} alt="" aria-hidden className="hidden lg:block absolute left-2 top-8 w-20 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
+          <img src={iconMilk} alt="" aria-hidden className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 w-16 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
+          <img src={iconCafe} alt="" aria-hidden className="hidden lg:block absolute left-2 bottom-8 w-20 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
+          <img src={iconHot} alt="" aria-hidden className="hidden lg:block absolute right-4 top-8 w-16 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
+          <img src={iconCold} alt="" aria-hidden className="hidden lg:block absolute right-2 top-1/2 -translate-y-1/2 w-20 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
+          <img src={iconSprinkles} alt="" aria-hidden className="hidden lg:block absolute right-4 bottom-8 w-20 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
+
+          <div className="max-w-4xl mx-auto">
+            <SectionHeader heading="What you'll do in Amara" />
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8">
+              {features.map(({ Icon, title, desc }) => (
+                <div
+                  key={title}
+                  className="bg-white border-2 border-[var(--amara-pink-border)] rounded-2xl p-4"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-[var(--amara-pink-surface)] flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-[var(--amara-rose)]" />
+                  </div>
+                  <h3 className="mt-3 text-sm font-extrabold text-[var(--amara-dark)]">{title}</h3>
+                  <p className="mt-1 text-xs text-[var(--amara-rose)] leading-relaxed">{desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -248,17 +283,25 @@ function Index() {
             {menu.map((m, i) => (
               <div
                 key={m.name + i}
-                className="bg-white rounded-2xl p-4 text-center border-2 border-[var(--amara-pink-border)] flex flex-col items-center"
+                className="relative bg-white rounded-2xl p-4 text-center border-2 border-[var(--amara-pink-border)] flex flex-col items-center"
               >
                 <img
+                  src={m.temp === "hot" ? iconHot : iconCold}
+                  alt={m.temp === "hot" ? "Hot drink" : "Cold drink"}
+                  className="absolute top-2 right-2 w-7 h-7 object-contain"
+                />
+                <img
                   src={m.img}
-                  alt={m.mystery ? "Mystery drink" : m.name}
-                  className={`w-20 h-20 object-contain mb-2 ${m.mystery ? "opacity-70" : ""}`}
+                  alt={m.name}
+                  className="w-20 h-20 object-contain mb-2"
                 />
                 <p className="text-sm font-extrabold text-[var(--amara-dark)]">{m.name}</p>
-                <p className="text-xs text-[var(--amara-rose)]">{m.type}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <img src={iconCafe} alt="" aria-hidden className="w-10 h-10 object-contain" />
+            <p className="text-sm font-extrabold text-[var(--amara-dark)]">And many more to unlock...</p>
           </div>
         </div>
       </section>
