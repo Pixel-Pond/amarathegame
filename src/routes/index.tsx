@@ -32,6 +32,9 @@ import iconMeowreo from "@/assets/icon-meowreo.png";
 import iconSprinkles from "@/assets/icon-sprinkles.png";
 import iconCafe from "@/assets/icon-cafe.png";
 import iconMilk from "@/assets/icon-milk.png";
+import iconWhipped from "@/assets/icon-whipped.png";
+import iconIcecream from "@/assets/icon-icecream.png";
+import iconCoffeeBean from "@/assets/icon-coffeebean.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -180,7 +183,7 @@ function Index() {
               src={catAlufo}
               alt=""
               aria-hidden
-              className="hidden md:block w-16 lg:w-20 h-auto amara-pixel shrink-0"
+              className="hidden md:block w-28 lg:w-36 h-auto amara-pixel shrink-0"
             />
             <div className="grid md:grid-cols-3 gap-4 flex-1">
               {[
