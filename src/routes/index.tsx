@@ -183,7 +183,7 @@ function Index() {
               src={catAlufo}
               alt=""
               aria-hidden
-              className="hidden md:block w-28 lg:w-36 h-auto amara-pixel shrink-0"
+              className="hidden md:block w-24 lg:w-28 h-auto amara-pixel shrink-0"
             />
             <div className="grid md:grid-cols-3 gap-4 flex-1">
               {[
