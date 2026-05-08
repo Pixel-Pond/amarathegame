@@ -219,7 +219,7 @@ function Index() {
 
       {/* FEATURES */}
       <section style={{ backgroundColor: "var(--amara-cream)" }}>
-        <div className="relative max-w-6xl mx-auto px-6 py-16">
+        <div className="relative w-full px-6 py-16">
           {/* Side decorations */}
           <img src={iconMeowreo} alt="" aria-hidden className="hidden lg:block absolute left-2 top-8 w-28 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
           <img src={iconMilk} alt="" aria-hidden className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 w-28 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
