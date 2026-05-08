@@ -338,8 +338,8 @@ function Index() {
         style={{ backgroundColor: "var(--amara-cream)" }}
       >
         <img src={pixelPondLogo} alt="Pixel Pond" className="mx-auto w-20 mb-3" />
-        <p className="text-sm font-extrabold text-[var(--amara-hot)] tracking-wide">Pixel Pond</p>
-        <p className="text-xs text-[var(--amara-rose)] mt-1 max-w-md mx-auto">
+        <p className="text-sm font-extrabold text-blue-950 tracking-wide">Pixel Pond</p>
+        <p className="text-xs text-blue-900 mt-1 max-w-md mx-auto">
           A multidisciplinary indie team of friends making meaningful games together.
         </p>
         <p className="text-[10px] text-[var(--amara-rose)]/70 mt-3">
