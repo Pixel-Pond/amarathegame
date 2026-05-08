@@ -220,12 +220,12 @@ function Index() {
       <section style={{ backgroundColor: "var(--amara-cream)" }}>
         <div className="relative max-w-6xl mx-auto px-6 py-16">
           {/* Side decorations */}
-          <img src={iconMeowreo} alt="" aria-hidden className="hidden lg:block absolute left-2 top-8 w-20 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
-          <img src={iconMilk} alt="" aria-hidden className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 w-20 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
-          <img src={iconCafe} alt="" aria-hidden className="hidden lg:block absolute left-2 bottom-8 w-20 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
-          <img src={iconWhipped} alt="" aria-hidden className="hidden lg:block absolute right-4 top-8 w-16 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
-          <img src={iconIcecream} alt="" aria-hidden className="hidden lg:block absolute right-2 top-1/2 -translate-y-1/2 w-20 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
-          <img src={iconSprinkles} alt="" aria-hidden className="hidden lg:block absolute right-4 bottom-8 w-20 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
+          <img src={iconMeowreo} alt="" aria-hidden className="hidden lg:block absolute left-2 top-8 w-28 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
+          <img src={iconMilk} alt="" aria-hidden className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 w-28 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
+          <img src={iconIcecream} alt="" aria-hidden className="hidden lg:block absolute left-2 bottom-8 w-28 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
+          <img src={iconWhipped} alt="" aria-hidden className="hidden lg:block absolute right-4 top-8 w-24 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
+          <img src={iconCafe} alt="" aria-hidden className="hidden lg:block absolute right-2 top-1/2 -translate-y-1/2 w-28 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
+          <img src={iconSprinkles} alt="" aria-hidden className="hidden lg:block absolute right-4 bottom-8 w-28 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
 
           <div className="max-w-4xl mx-auto">
             <SectionHeader heading="What you'll do in Amara" />
