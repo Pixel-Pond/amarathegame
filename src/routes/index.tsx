@@ -274,7 +274,7 @@ function Index() {
                 <img
                   src={m.img}
                   alt={m.name}
-                  className="w-20 h-20 object-contain mb-2"
+                  className={`w-20 h-20 object-contain mb-2 ${m.name === "Espresso" || m.name === "Cappuccino" ? "mt-3" : ""}`}
                 />
                 <p className="text-sm font-extrabold text-[var(--amara-dark)]">{m.name}</p>
               </div>
