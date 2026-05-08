@@ -249,29 +249,6 @@ function Index() {
 
       <PixelBand />
 
-      {/* FEATURES */}
-      <section style={{ backgroundColor: "var(--amara-cream)" }}>
-        <div className="max-w-4xl mx-auto px-6 py-16">
-          <SectionHeader heading="What you'll do in Amara" />
-          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8">
-            {features.map(({ Icon, title, desc }) => (
-              <div
-                key={title}
-                className="bg-white border-2 border-[var(--amara-pink-border)] rounded-2xl p-4"
-              >
-                <div className="w-10 h-10 rounded-lg bg-[var(--amara-pink-surface)] flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-[var(--amara-rose)]" />
-                </div>
-                <h3 className="mt-3 text-sm font-extrabold text-[var(--amara-dark)]">{title}</h3>
-                <p className="mt-1 text-xs text-[var(--amara-rose)] leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <PixelBand />
-
       {/* MENU */}
       <section style={{ backgroundColor: "#FDD9DA" }}>
         <div className="max-w-4xl mx-auto px-6 py-16">
@@ -303,8 +280,8 @@ function Index() {
             ))}
           </div>
           <div className="mt-8 flex items-center justify-center gap-3">
-            <img src={iconCafe} alt="" aria-hidden className="w-10 h-10 object-contain" />
-            <p className="text-sm font-extrabold text-[var(--amara-dark)]">And many more to unlock...</p>
+            <img src={iconCoffeeBean} alt="" aria-hidden className="w-8 h-8 object-contain" />
+            <p className="text-lg font-extrabold text-[var(--amara-rose)]">And many more to unlock...</p>
           </div>
         </div>
       </section>
