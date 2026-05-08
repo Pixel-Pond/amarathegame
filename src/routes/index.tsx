@@ -178,12 +178,13 @@ function Index() {
       <section style={{ backgroundColor: "#FDD9DA" }}>
         <div className="max-w-5xl mx-auto px-6 py-12">
           <SectionHeader heading="A day in Rebeca's life" />
-          <div className="flex items-center justify-center gap-8 mt-4">
+          <div className="flex items-end justify-center gap-8 mt-4">
             <img
               src={catAlufo}
               alt=""
               aria-hidden
               className="hidden md:block w-24 lg:w-28 h-auto amara-pixel shrink-0"
+              style={{ imageRendering: "pixelated" }}
             />
             <div className="grid md:grid-cols-3 gap-4 flex-1">
               {[
