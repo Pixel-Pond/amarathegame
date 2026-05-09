@@ -220,13 +220,13 @@ function Index() {
       {/* FEATURES */}
       <section style={{ backgroundColor: "var(--amara-cream)" }}>
         <div className="relative w-full px-6 py-16">
-          {/* Side decorations */}
-          <img src={iconMeowreo} alt="" aria-hidden className="hidden lg:block absolute left-[12%] top-8 w-28 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
-          <img src={iconMilk} alt="" aria-hidden className="hidden lg:block absolute left-[12%] top-1/2 -translate-y-1/2 w-28 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
-          <img src={iconIcecream} alt="" aria-hidden className="hidden lg:block absolute left-[12%] bottom-8 w-28 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
-          <img src={iconWhipped} alt="" aria-hidden className="hidden lg:block absolute right-[12%] top-8 w-24 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
-          <img src={iconCafe} alt="" aria-hidden className="hidden lg:block absolute right-[12%] top-1/2 -translate-y-1/2 w-28 pointer-events-none" style={{ transform: "rotate(-8deg)" }} />
-          <img src={iconSprinkles} alt="" aria-hidden className="hidden lg:block absolute right-[12%] bottom-8 w-28 pointer-events-none" style={{ transform: "rotate(8deg)" }} />
+          {/* Side decorations — centered in the gutter between viewport edge and the max-w-4xl (56rem) content */}
+          <img src={iconMeowreo} alt="" aria-hidden className="hidden lg:block absolute top-8 w-20 xl:w-28 pointer-events-none" style={{ left: "calc((100% - 56rem) / 4)", transform: "translateX(-50%) rotate(-8deg)" }} />
+          <img src={iconMilk} alt="" aria-hidden className="hidden lg:block absolute top-1/2 w-20 xl:w-28 pointer-events-none" style={{ left: "calc((100% - 56rem) / 4)", transform: "translate(-50%, -50%) rotate(8deg)" }} />
+          <img src={iconIcecream} alt="" aria-hidden className="hidden lg:block absolute bottom-8 w-20 xl:w-28 pointer-events-none" style={{ left: "calc((100% - 56rem) / 4)", transform: "translateX(-50%) rotate(-8deg)" }} />
+          <img src={iconWhipped} alt="" aria-hidden className="hidden lg:block absolute top-8 w-20 xl:w-24 pointer-events-none" style={{ right: "calc((100% - 56rem) / 4)", transform: "translateX(50%) rotate(8deg)" }} />
+          <img src={iconCafe} alt="" aria-hidden className="hidden lg:block absolute top-1/2 w-20 xl:w-28 pointer-events-none" style={{ right: "calc((100% - 56rem) / 4)", transform: "translate(50%, -50%) rotate(-8deg)" }} />
+          <img src={iconSprinkles} alt="" aria-hidden className="hidden lg:block absolute bottom-8 w-20 xl:w-28 pointer-events-none" style={{ right: "calc((100% - 56rem) / 4)", transform: "translateX(50%) rotate(8deg)" }} />
 
           <div className="max-w-4xl mx-auto">
             <SectionHeader heading="What you'll do in Amara" />
