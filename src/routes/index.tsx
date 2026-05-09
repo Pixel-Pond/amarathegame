@@ -190,7 +190,7 @@ function Index() {
               {[
                 { Icon: Sun, time: "8 a.m.", title: "Open the café", desc: "Rebeca starts her shift. Serve cats before their patience runs out." },
                 { Icon: Coffee, time: "5 p.m.", title: "Daily report", desc: "Shift ends. Review your performance, earnings, and reputation." },
-                { Icon: Bed, time: "7 p.m.", title: "Bedroom activities", desc: "Return to bedroom on the café's second floor. Make online purchases and write in your diary." },
+                { Icon: Bed, time: "7 p.m.", title: "Post-shift activities", desc: "Return to bedroom on the café's second floor. Make online purchases and write in your diary." },
               ].map((b) => (
                 <div
                   key={b.time}
