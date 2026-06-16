@@ -35,6 +35,17 @@ import iconMilk from "@/assets/icon-milk.png";
 import iconWhipped from "@/assets/icon-whipped.png";
 import iconIcecream from "@/assets/icon-icecream.png";
 import iconCoffeeBean from "@/assets/icon-coffeebean.png";
+import teamJessica from "@/assets/team-jessica.png.asset.json";
+import teamRafaLeao from "@/assets/team-rafaleao.png.asset.json";
+import teamJenn from "@/assets/team-jenn.png.asset.json";
+import teamRafaJorio from "@/assets/team-rafaeljorio.png.asset.json";
+
+const team = [
+  { name: "Jessica Duque", role: "Game Designer & Lead Programmer", img: teamJessica.url },
+  { name: "Rafael Leão", role: "Game Programmer", img: teamRafaLeao.url },
+  { name: "Jennifer Duque", role: "Game Artist", img: teamJenn.url },
+  { name: "Rafael Jório", role: "Video Editor", img: teamRafaJorio.url },
+];
 
 export const Route = createFileRoute("/")({
   component: Index,
