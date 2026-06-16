@@ -78,6 +78,7 @@ type SocialItem =
   | { type: "icon"; Icon: typeof Youtube; label: string; href: string };
 
 const socialsEN: SocialItem[] = [
+  { type: "img", src: iconInstagram, label: "Instagram", href: "https://www.instagram.com/amaraisagame/" },
   { type: "img", src: iconDiscord, label: "Discord", href: "https://discord.com/invite/xzgxcSYAMp" },
   { type: "icon", Icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@amarathegame" },
 ];
