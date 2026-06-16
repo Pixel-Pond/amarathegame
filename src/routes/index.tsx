@@ -35,6 +35,17 @@ import iconMilk from "@/assets/icon-milk.png";
 import iconWhipped from "@/assets/icon-whipped.png";
 import iconIcecream from "@/assets/icon-icecream.png";
 import iconCoffeeBean from "@/assets/icon-coffeebean.png";
+import teamJessica from "@/assets/team-jessica.png.asset.json";
+import teamRafaLeao from "@/assets/team-rafaleao.png.asset.json";
+import teamJenn from "@/assets/team-jenn.png.asset.json";
+import teamRafaJorio from "@/assets/team-rafaeljorio.png.asset.json";
+
+const team = [
+  { name: "Jessica Duque", role: "Game Designer & Lead Programmer", img: teamJessica.url },
+  { name: "Rafael Leão", role: "Game Programmer", img: teamRafaLeao.url },
+  { name: "Jennifer Duque", role: "Game Artist", img: teamJenn.url },
+  { name: "Rafael Jório", role: "Video Editor", img: teamRafaJorio.url },
+];
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -290,8 +301,39 @@ function Index() {
 
       <PixelBand />
 
+      {/* TEAM */}
+      <section style={{ backgroundColor: "var(--amara-cream)" }}>
+        <div className="max-w-5xl mx-auto px-6 py-16">
+          <SectionHeader
+            heading="The Team Behind It"
+            subtext="The friends pouring love into every pixel of Amara."
+          />
+          <div className="mt-8 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            {team.map((m) => (
+              <div
+                key={m.name}
+                className="flex flex-col items-center bg-[var(--amara-rose)] rounded-2xl border-4 border-[var(--amara-pink-border)] p-4 shadow-md"
+              >
+                <div className="w-full bg-[var(--amara-pink-light)] rounded-xl border-2 border-[var(--amara-pink-border)] py-2 px-3 text-center">
+                  <p className="text-sm font-extrabold text-[var(--amara-rose)]">{m.name}</p>
+                </div>
+                <div className="mt-3 w-full aspect-square overflow-hidden rounded-xl border-2 border-[var(--amara-pink-border)] bg-[var(--amara-cream)]">
+                  <img src={m.img} alt={m.name} className="w-full h-full object-cover" />
+                </div>
+                <div className="mt-3 w-full bg-[var(--amara-pink-light)] rounded-xl border-2 border-[var(--amara-pink-border)] py-2 px-3 text-center min-h-[3.25rem] flex items-center justify-center">
+                  <p className="text-xs font-extrabold text-[var(--amara-rose)] leading-tight">{m.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <PixelBand />
+
       {/* FOLLOW */}
       <section className="relative overflow-hidden" style={{ backgroundColor: "var(--amara-dark)" }}>
+
         <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-6 left-12 w-10 pointer-events-none" />
         <img src={sparkle} alt="" aria-hidden className="hidden md:block absolute top-6 right-12 w-10 pointer-events-none" />
         <div className="relative max-w-3xl mx-auto px-6 py-14 text-center">
