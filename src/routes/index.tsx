@@ -22,7 +22,7 @@ import iconTiktok from "@/assets/icon-tiktok.png";
 import sparkle from "@/assets/sparkle.png";
 
 import pixelPondLogo from "@/assets/pixel-pond-logo.png";
-import gameplayGif from "@/assets/gameplay.gif";
+import generalGameplayAsset from "@/assets/general-gameplay.gif.asset.json";
 import catAlufo from "@/assets/cat-alufo.gif";
 import rebeca from "@/assets/rebeca.png";
 import amaraCupLogo from "@/assets/amara-cup-logo.png";
@@ -162,7 +162,7 @@ function Index() {
           <SectionHeader heading="Meet Amara" />
           <div className="mt-6 flex justify-center">
             <img
-              src={gameplayGif}
+              src={generalGameplayAsset.url}
               alt="Amara gameplay"
               className="w-full max-w-2xl h-auto rounded-2xl border-4 border-[var(--amara-rose)] shadow-lg amara-pixel"
             />
