@@ -321,7 +321,7 @@ function Index() {
                   <img src={m.img} alt={m.name} className="w-full h-full object-cover" />
                 </div>
                 <div className="mt-3 w-full bg-[var(--amara-pink-light)] rounded-xl border-2 border-[var(--amara-pink-border)] py-2 px-3 text-center min-h-[3.25rem] flex items-center justify-center">
-                  <p className="text-xs font-extrabold text-[var(--amara-rose)] leading-tight">{m.role}</p>
+                  <p className={`font-extrabold text-[var(--amara-rose)] leading-tight ${m.name === "Jessica Duque" ? "text-xs" : "text-sm"}`}>{m.role}</p>
                 </div>
               </div>
             ))}
