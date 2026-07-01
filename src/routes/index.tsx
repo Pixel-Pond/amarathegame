@@ -389,13 +389,13 @@ function Index() {
         <div className="mt-6 inline-flex flex-col items-center gap-2 bg-white/60 border-2 border-[var(--amara-pink-border)] rounded-2xl px-5 py-3">
           <p className="text-xs font-extrabold uppercase tracking-widest text-blue-950">Get in touch</p>
           <a
-            href="https://mail.google.com/mail/?view=cm&to=thegameamara@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&to=pixelpondgamesstudio@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-bold text-[var(--amara-rose)] hover:text-blue-950 transition-colors"
           >
             <Coffee className="w-4 h-4" />
-            thegameamara@gmail.com
+            pixelpondgamesstudio@gmail.com
           </a>
         </div>
         <p className="text-[10px] text-[var(--amara-rose)]/70 mt-3">
