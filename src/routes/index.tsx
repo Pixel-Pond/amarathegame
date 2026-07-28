@@ -20,6 +20,9 @@ import iconInstagram from "@/assets/icon-instagram.png";
 import iconDiscord from "@/assets/icon-discord.png";
 import iconTiktok from "@/assets/icon-tiktok.png";
 import sparkle from "@/assets/sparkle.png";
+import wishlistSteam from "@/assets/wishlist-steam-en.png.asset.json";
+
+const STEAM_URL = "https://store.steampowered.com/app/4926820/Amara/";
 
 import pixelPondLogo from "@/assets/pixel-pond-logo.png";
 import generalGameplayAsset from "@/assets/general-gameplay.gif.asset.json";
@@ -162,6 +165,19 @@ function Index() {
               </span>
             ))}
           </div>
+          <a
+            href={STEAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-block transition-transform hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-[var(--amara-peach)]/60 rounded-2xl"
+            aria-label="Wishlist Amara on Steam"
+          >
+            <img
+              src={wishlistSteam.url}
+              alt="Wishlist Amara on Steam"
+              className="h-14 md:h-16 w-auto drop-shadow-[0_6px_0_rgba(0,0,0,0.25)]"
+            />
+          </a>
         </div>
       </section>
 
@@ -343,6 +359,24 @@ function Index() {
           <p className="mt-2 text-sm text-[var(--amara-pink-border)]">
             We're a small game studio of friends — your support means the world to us.
           </p>
+          <div className="mt-6 flex flex-col items-center gap-2">
+            <p className="text-xs font-extrabold uppercase tracking-widest text-[var(--amara-peach)]">
+              The biggest support? A wishlist.
+            </p>
+            <a
+              href={STEAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block transition-transform hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-[var(--amara-peach)]/60 rounded-2xl"
+              aria-label="Wishlist Amara on Steam"
+            >
+              <img
+                src={wishlistSteam.url}
+                alt="Wishlist Amara on Steam"
+                className="h-14 md:h-16 w-auto drop-shadow-[0_6px_0_rgba(0,0,0,0.35)]"
+              />
+            </a>
+          </div>
           {([
             { title: "English", items: socialsEN },
             { title: "Português", items: socialsPT },
