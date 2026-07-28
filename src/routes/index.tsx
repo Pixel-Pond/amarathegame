@@ -165,6 +165,19 @@ function Index() {
               </span>
             ))}
           </div>
+          <a
+            href={STEAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-block transition-transform hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-[var(--amara-peach)]/60 rounded-2xl"
+            aria-label="Wishlist Amara on Steam"
+          >
+            <img
+              src={wishlistSteam.url}
+              alt="Wishlist Amara on Steam"
+              className="h-14 md:h-16 w-auto drop-shadow-[0_6px_0_rgba(0,0,0,0.25)]"
+            />
+          </a>
         </div>
       </section>
 
