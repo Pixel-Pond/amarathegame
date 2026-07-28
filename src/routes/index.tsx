@@ -20,6 +20,9 @@ import iconInstagram from "@/assets/icon-instagram.png";
 import iconDiscord from "@/assets/icon-discord.png";
 import iconTiktok from "@/assets/icon-tiktok.png";
 import sparkle from "@/assets/sparkle.png";
+import wishlistSteam from "@/assets/wishlist-steam-en.png.asset.json";
+
+const STEAM_URL = "https://store.steampowered.com/app/4926820/Amara/";
 
 import pixelPondLogo from "@/assets/pixel-pond-logo.png";
 import generalGameplayAsset from "@/assets/general-gameplay.gif.asset.json";
