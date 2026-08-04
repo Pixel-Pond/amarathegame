@@ -20,12 +20,12 @@ import iconInstagram from "@/assets/icon-instagram.png";
 import iconDiscord from "@/assets/icon-discord.png";
 import iconTiktok from "@/assets/icon-tiktok.png";
 import sparkle from "@/assets/sparkle.png";
-import wishlistSteam from "@/assets/wishlist-steam-en.png.asset.json";
+import wishlistSteam from "@/assets/wishlist-steam-en.png";
 
 const STEAM_URL = "https://store.steampowered.com/app/4926820/Amara/";
 
 import pixelPondLogo from "@/assets/pixel-pond-logo.png";
-import generalGameplayAsset from "@/assets/general-gameplay.gif.asset.json";
+import generalGameplay from "@/assets/general-gameplay.gif";
 import catAlufo from "@/assets/cat-alufo.gif";
 import rebeca from "@/assets/rebeca.png";
 import amaraCupLogo from "@/assets/amara-cup-logo.png";
@@ -38,16 +38,16 @@ import iconMilk from "@/assets/icon-milk.png";
 import iconWhipped from "@/assets/icon-whipped.png";
 import iconIcecream from "@/assets/icon-icecream.png";
 import iconCoffeeBean from "@/assets/icon-coffeebean.png";
-import teamJessica from "@/assets/team-jessica.png.asset.json";
-import teamRafaLeao from "@/assets/team-rafaleao.png.asset.json";
-import teamJenn from "@/assets/team-jenn.png.asset.json";
-import teamRafaJorio from "@/assets/team-rafaeljorio.png.asset.json";
+import teamJessica from "@/assets/team-jessica.png";
+import teamRafaLeao from "@/assets/team-rafaleao.png";
+import teamJenn from "@/assets/team-jenn.png";
+import teamRafaJorio from "@/assets/team-rafaeljorio.png";
 
 const team = [
-  { name: "Jessica Duque", role: "Game Designer & Lead Programmer", img: teamJessica.url },
-  { name: "Rafael Leão", role: "Game Programmer", img: teamRafaLeao.url },
-  { name: "Jennifer Duque", role: "Game Artist", img: teamJenn.url },
-  { name: "Rafael Jório", role: "Video Editor", img: teamRafaJorio.url },
+  { name: "Jessica Duque", role: "Game Designer & Lead Programmer", img: teamJessica },
+  { name: "Rafael Leão", role: "Game Programmer", img: teamRafaLeao },
+  { name: "Jennifer Duque", role: "Game Artist", img: teamJenn },
+  { name: "Rafael Jório", role: "Video Editor", img: teamRafaJorio },
 ];
 
 export const Route = createFileRoute("/")({
@@ -173,7 +173,7 @@ function Index() {
             aria-label="Wishlist Amara on Steam"
           >
             <img
-              src={wishlistSteam.url}
+              src={wishlistSteam}
               alt="Wishlist Amara on Steam"
               className="h-14 md:h-16 w-auto drop-shadow-[0_6px_0_rgba(0,0,0,0.25)]"
             />
@@ -189,7 +189,7 @@ function Index() {
           <SectionHeader heading="Meet Amara" />
           <div className="mt-6 flex justify-center">
             <img
-              src={generalGameplayAsset.url}
+              src={generalGameplay}
               alt="Amara gameplay"
               className="w-full max-w-2xl h-auto rounded-2xl border-4 border-[var(--amara-rose)] shadow-lg amara-pixel"
             />
@@ -371,7 +371,7 @@ function Index() {
               aria-label="Wishlist Amara on Steam"
             >
               <img
-                src={wishlistSteam.url}
+                src={wishlistSteam}
                 alt="Wishlist Amara on Steam"
                 className="h-14 md:h-16 w-auto drop-shadow-[0_6px_0_rgba(0,0,0,0.35)]"
               />
