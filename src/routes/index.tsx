@@ -263,10 +263,11 @@ function Index() {
           <div className="max-w-4xl mx-auto">
             <SectionHeader heading="What you'll do in Amara" />
             <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8">
-              {features.map(({ Icon, title, desc }) => (
+              {features.map(({ Icon, title, desc }, i) => (
                 <div
                   key={title}
-                  className="bg-white border-2 border-[var(--amara-pink-border)] rounded-2xl p-4"
+                  className="amara-card bg-white border-2 border-[var(--amara-pink-border)] rounded-2xl p-4"
+                  style={{ animationDelay: `${i * 60}ms` }}
                 >
                   <div className="w-10 h-10 rounded-lg bg-[var(--amara-pink-surface)] flex items-center justify-center">
                     <Icon className="w-5 h-5 text-[var(--amara-rose)]" />
@@ -296,7 +297,8 @@ function Index() {
             {menu.map((m, i) => (
               <div
                 key={m.name + i}
-                className="relative bg-white rounded-2xl p-4 text-center border-2 border-[var(--amara-pink-border)] flex flex-col items-center"
+                className="amara-card relative bg-white rounded-2xl p-4 text-center border-2 border-[var(--amara-pink-border)] flex flex-col items-center"
+                style={{ animationDelay: `${i * 60}ms` }}
               >
                 <img
                   src={m.temp === "hot" ? iconHot : iconCold}
@@ -329,10 +331,11 @@ function Index() {
             subtext="The friends pouring love into every pixel of Amara."
           />
           <div className="mt-8 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((m) => (
+            {team.map((m, i) => (
               <div
                 key={m.name}
-                className="flex flex-col items-center bg-[var(--amara-rose)] rounded-2xl border-4 border-[var(--amara-pink-border)] p-4 shadow-md"
+                className="amara-card flex flex-col items-center bg-[var(--amara-rose)] rounded-2xl border-4 border-[var(--amara-pink-border)] p-4 shadow-md"
+                style={{ animationDelay: `${i * 80}ms` }}
               >
                 <div className="w-full bg-[var(--amara-pink-light)] rounded-xl border-2 border-[var(--amara-pink-border)] py-2 px-3 text-center">
                   <p className="text-sm font-extrabold text-[var(--amara-rose)]">{m.name}</p>
