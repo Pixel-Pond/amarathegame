@@ -159,3 +159,44 @@
 }
 
 .amara-pixel { image-rendering: pixelated; }
+
+/* Motion & accessibility helpers */
+@keyframes amara-fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+.amara-card {
+  animation: amara-fade-up 0.5s ease-out both;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.amara-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 24px -12px color-mix(in oklab, var(--amara-dark) 45%, transparent);
+}
+
+.amara-skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 50;
+  border-radius: 0.75rem;
+  background-color: var(--amara-cream);
+  color: var(--amara-dark);
+  padding: 0.5rem 1rem;
+  font-weight: 800;
+  transition: top 0.15s ease;
+}
+.amara-skip-link:focus { top: 1rem; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--amara-hot);
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .amara-card { animation: none; transition: none; }
+  .amara-card:hover { transform: none; }
+}
