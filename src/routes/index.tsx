@@ -133,8 +133,10 @@ function PixelBand() {
 }
 
 function Index() {
-  return (
-    <main className="min-h-screen" style={{ backgroundColor: "var(--amara-pink-light)" }}>
+    <>
+    <a href="#main-content" className="amara-skip-link">Skip to content</a>
+    <main id="main-content" className="min-h-screen" style={{ backgroundColor: "var(--amara-pink-light)" }}>
+
       {/* HERO */}
       <section className="relative overflow-hidden" style={{ backgroundColor: "var(--amara-dark)" }}>
         <div className="relative max-w-4xl mx-auto px-6 pt-16 pb-20 text-center">
