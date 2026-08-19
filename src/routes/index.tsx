@@ -10,7 +10,7 @@ import {
   Sun,
   Bed,
 } from "lucide-react";
-import amaraTitleAsset from "@/assets/amara-title.png.asset.json";
+import amaraTitle from "@/assets/amara-title.png";
 import drinkChocolateMocha from "@/assets/drink-chocolate-mocha.png";
 import drinkStrawberryFrap from "@/assets/drink-strawberry-frappuccino.png";
 import drinkCookiesCream from "@/assets/drink-cookies-cream.png";
@@ -146,7 +146,7 @@ function Index() {
             Coming Q2 2027 · PC
           </span>
           <img
-            src={amaraTitleAsset.url}
+            src={amaraTitle}
             alt="Amara"
             className="mt-8 mx-auto w-full max-w-xl h-auto amara-pixel"
           />
