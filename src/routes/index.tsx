@@ -146,7 +146,7 @@ function Index() {
             Coming Q2 2027 · PC
           </span>
           <img
-            src={amaraTitleAsset.url}
+            src={amaraTitle}
             alt="Amara"
             className="mt-8 mx-auto w-full max-w-xl h-auto amara-pixel"
           />
